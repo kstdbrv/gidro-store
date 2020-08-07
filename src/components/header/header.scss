@@ -15,8 +15,15 @@
     display: flex;
     display: inline-block;
     margin-right: 50px;
+    transition: all .3s;
     &:last-child{
       margin: 0;
+    }
+    &:hover{
+     color: #1C62CD;
+    }
+    &:active{
+     color: #2F3035;
     }
   }
 }
@@ -98,4 +105,7 @@
       color: $mainFontColor;
     }
   }
+}
+.header-botton__menu-categories{
+  margin-bottom: 80px;
 }
