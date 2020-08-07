@@ -1,0 +1,55 @@
+@import "~normalize.css";
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+/* Global */
+html{
+  box-sizing:border-box;
+  height: 100%;
+}
+body{
+  @extend %sf-regular;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  line-height: $mainLineHeight;
+  min-width: $smPhoneWidth;
+  overflow-x: hidden;
+  position: relative;
+}
+*, *:before, *:after { box-sizing: border-box; }
+h1, h2, h3, h4, h5, h6 { margin: 0;
+  font-size: inherit; }
+p { margin: 0; }
+a { text-decoration: none;
+   color: inherit; 
+  }
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+// components
+@import "../../components/header/header.scss";
+/* @import "../../components/footer/footer.scss"; */
+
+
+
+/* html {
+  @media screen and (max-width: $desktopWidth) {
+		font-size: 16px;
+  }
+  @media screen and (max-width: $tableWidth) {
+		font-size: 15px;
+  }
+  @media screen and (max-width: $phoneWidth) {
+		font-size: 14px;
+  } 
+} */

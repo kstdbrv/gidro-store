@@ -1,0 +1,35 @@
+//FONTS
+%sf-regular{ //mainFont
+  font-family: 'SFProDisplay-Regular', sans-serif;
+  font-weight: 400;
+}
+%sf-semibold{
+  font-family:'SFProDisplay-Semibold', sans-serif;
+  font-weight: 600;
+}
+%sf-bold{
+  font-family: 'SFProDisplay-Bold', sans-serif;
+  font-weight: 600;
+}
+%sf-medium{
+  font-family: 'SFProDisplay-Medium', sans-serif;
+  font-weight: 500;
+}
+%barlow-bold{
+  font-family: 'Barlow-Bold', sans-serif;
+  font-weight: 600;
+}
+%barlow-regular{
+  font-family: 'Barlow-Regular', sans-serif;
+  font-weight: 400;
+}
+
+$mainFontColor           : #2F3035;
+$mainFontSize            : 20px;
+$mainLineHeight          : 24px;
+// Size
+$desktopWidth            : 1920px;
+$smDesktopWidth          : 980px;
+$tableWidth              : 768px;
+$phoneWidth              : 480px;
+$smPhoneWidth            : 320px;

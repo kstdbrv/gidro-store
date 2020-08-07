@@ -1,0 +1,37 @@
+- var navLinks = [{link:"#", name:"Квадроциклы"},{link:"#", name:"Катера"},{link:"#", name:"Гидроциклы"},{link:"#", name:"Лодки"},{link:"#", name:"Вездеходы"},{link:"#", name:"Снегоходы"},{link:"#", name:"Двигатели"},{link:"#", name:"Запчасти"}]
+
+header.header
+  .header-top
+    .container
+      .header-top__content
+        .header-top__column 
+          nav.header-top__menu.menu
+            ul.menu__list
+              li.menu__item
+                a.menu__link(href="#") Магазины
+              li.menu__item
+                a.menu__link(href="#") Акции
+              li.menu__item
+                a.menu__link(href="#") Доставка и оплата
+        .header-top__column
+          a.logo(href="#")
+           img.logo__img(src=require('./images/logo.svg').default, alt="logo")
+        .header-top__column
+          p.header-top__adress.adress-header Москва,  ул. Науки  25
+          ul.header-top__user-list.user-list-header
+            li.user-list-header__item
+              a.user-list-header__link(href="#")
+                img(src=require('./images/hart.svg').default, alt="hart")
+            li.user-list-header__item
+              a.user-list-header__link(href="#")
+                img(src=require('./images/user.svg').default, alt="user")
+            li.user-list-header__item
+              a.user-list-header__link.user-list-header__link_basket(href="#")
+                img(src=require('./images/basket.svg').default, alt="basket")
+                p.user-list-header__basket-num 10
+  .header-bottom
+    .container
+      ul.header-botton__menu-categories.menu-categories-header
+        for i in navLinks
+          li.menu-categories-header__item
+            a(href=i.link).menu-categories-header__link=i.name
