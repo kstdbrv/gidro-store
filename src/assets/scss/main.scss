@@ -22,7 +22,8 @@ h1, h2, h3, h4, h5, h6 { margin: 0;
   font-size: inherit; }
 p { margin: 0; }
 a { text-decoration: none;
-   color: inherit; 
+   color: inherit;
+   display: inline-block; 
   }
 ul, li {
   margin: 0;
@@ -34,13 +35,18 @@ ul, li {
   padding: 0 15px;
   margin: 0 auto;
 }
+.page-section{
+  margin-bottom: 80px;
+}
 
 
 // components
 @import "../../components/header/header";
 @import "../../components/banner-section/banner-section";
 @import "../../components/search/search";
-/* @import "../../components/footer/footer.scss"; */
+@import "../../components/categories/categories";
+
+/* @import "../../components/footer/footer"; */
 
 
 
