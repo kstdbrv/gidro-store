@@ -1,0 +1,50 @@
+footer.footer
+  .container
+    .footer__top.top-footer
+      .top-footer__column
+        .top-footer__subscribe.subscribe-footer
+          h6.subscribe-footer__title Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+          form.subscribe-footer__form(action="")
+            input.subscribe-footer__input(type="email" placeholder="Введите ваш e-mail:")
+            button.subscribe-footer__btn Отправить
+      .top-footer__column
+        h6.info-footer__title Информация
+        ul.top-footer__info.info-footer 
+          li.info-footer__item
+            a.info-footer__link(href="#") О компании
+          li.info-footer__item
+            a.info-footer__link(href="#") Контакты
+          li.info-footer__item
+            a.info-footer__link(href="#") Акции
+          li.info-footer__item
+            a.info-footer__link(href="#") Магазины
+      .top-footer__column
+        .top-footer__links.links-footer
+          h6.links-footer__title Интернет-магазин
+          ul.links-footer__list
+            li.links-footer__item
+              a.links-footer__link(href="#") Доставка и самовывоз
+            li.links-footer__item
+              a.links-footer__link(href="#") Оплата
+            li.links-footer__item
+              a.links-footer__link(href="#") Возврат-обмен
+            li.links-footer__item
+              a.links-footer__link(href="#") Новости
+      .top-footer__column
+        .top-footer__social-links.social-links
+          ul.social-links__list
+            li.social-links__item
+             a.social-links__link(href="#")
+               img(src=require('./images/instagram.svg').default, alt="instagram")
+            li.social-links__item
+             a.social-links__link(href="#")
+               img(src=require('./images/vk.svg').default, alt="vk")
+            li.social-links__item
+             a.social-links__link(href="#")
+               img(src=require('./images/facebook.svg').default, alt="facebook")
+            li.social-links__item
+             a.social-links__link(href="#")
+               img(src=require('./images/utube.svg').default, alt="utube")
+    .footer__bottom.bottom-footer
+      a.bottom-footer__deal(href="#") Договор оферты
+      a.bottom-footer__policy(href="#") Политика обработки персональных данных

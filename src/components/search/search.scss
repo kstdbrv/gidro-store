@@ -2,19 +2,19 @@
   margin-bottom: 25px;
   &__item{
    padding: 11px 26px;
-   &_active{
+  }
+  &__item.tab_active{
      @extend %sf-bold;
     background-color: #F0F0F4;
     border-radius: 5px;
-   }
   }
 }
 .box-search{
   &__item{
     display: none;
-    &_active{
-      display: block;
-    }
+  }
+  &__item.tabs-content_active{
+    display: block;
   }
   &__form{
     outline: none;
@@ -49,5 +49,18 @@
     outline: none;
     border: none;
     margin-left: -3px;
+    transition: all .3s;
+    &:hover{
+      @extend %sf-bold;
+      color: #1C62CD;
+      border-radius:3px;
+      background-color:#FFFFFF;
+      border: 1px solid #1C62CD;   
+    }
+    &:active{
+      color: #FFFFFF;
+      background-color:#1C62CD;
+      border: none;
+    }
   }
 }
