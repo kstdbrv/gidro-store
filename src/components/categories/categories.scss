@@ -18,7 +18,8 @@
   transition: all .3s;
   &:hover{
     box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
-    .item-categories__title{
+    .item-categories__title,.item-categories__text{
+      transition: all .3s;
       color: #1C62CD;
     }
   }

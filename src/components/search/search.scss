@@ -10,12 +10,6 @@
   }
 }
 .box-search{
-  &__item{
-    display: none;
-  }
-  &__item.tabs-content_active{
-    display: block;
-  }
   &__form{
     outline: none;
     border: none;

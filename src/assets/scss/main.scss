@@ -38,6 +38,14 @@ ul, li {
 .page-section{
   margin-bottom: 80px;
 }
+//STYLE FOR TABS
+.tabs-content{
+  display: none;
+  &_active{
+    display: block;
+  }
+}
+//
 
 
 // components
@@ -46,6 +54,7 @@ ul, li {
 @import "../../components/search/search";
 @import "../../components/categories/categories";
 @import "../../components/products/products";
+@import "../../components/banner/banner";
 
 
 

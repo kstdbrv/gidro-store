@@ -6,15 +6,15 @@
         a.tab.tabs-search__item.tab_active(href="#tab-2") Поиск по марке
         a.tab.tabs-search__item(href="#tab-3") Поиск по названию товара
       .search__box.box-search
-        .tabs-content.box-search__item#tab-1
+        .box-search__item#tab-1.tabs-content
           form.box-search__form(action="post")
             input.box-search__input(type="text" placeholder="Введите номер ")
             button.box-search__btn искать
-        .tabs-content.box-search__item#tab-2.tabs-content_active
+        .box-search__item#tab-2.tabs-content.tabs-content_active
           form.box-search__form(action="post")
             input.box-search__input(type="text" placeholder="Введите марку ")
             button.box-search__btn искать
-        .tabs-content.box-search__item#tab-3
+        .box-search__item#tab-3.tabs-content
           form.box-search__form(action="post")
             input.box-search__input(type="text" placeholder="Введите название товара ")
             button.box-search__btn искать
