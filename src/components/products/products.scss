@@ -50,6 +50,9 @@
   padding: 52px 20px 31px;
   transition: all .3s;
   min-height:400px;
+  img{
+    max-width: 100%;
+  }
   &:hover{
     background: #FFFFFF;
     box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
@@ -74,7 +77,7 @@
     position: relative;
     width: 271px;
   }
-  &__not-available{
+  &_not-available{
     .product-item__basket{
       display: none;
     }

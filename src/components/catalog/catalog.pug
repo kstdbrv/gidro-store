@@ -1,0 +1,242 @@
+section.catalog.page-section
+  .container
+    h2.catalog__title Гидроциклы
+    .catalog__filter.filter-catalog
+      .filter-catalog__items.filter-items
+        button Полноприводные
+        button от 5000
+        button BRP
+        button еще
+      .filter-catalog__btn.filter-btn
+        select.filter-style
+          option(value="")
+          option(value="")
+          option(value="")
+        button.filter-btn__gred
+          svg(width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+            rect(x="1" y="1" width="21" height="19" stroke="#2F3035" stroke-width="2")
+            rect(x="7" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2")
+            rect(x="7" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2")
+            rect(x="14" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2")
+            rect(x="14" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2")
+        button.filter-btn__line
+          svg(width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+            g(opacity="0.3")
+            rect(x="6" width="19" height="3" rx="1.5" fill="#2F3035")
+            rect(x="6" y="8" width="19" height="3" rx="1.5" fill="#2F3035")
+            rect(x="6" y="16" width="19" height="3" rx="1.5" fill="#2F3035")
+            rect(width="3" height="3" rx="1.5" fill="#2F3035")
+            rect(y="8" width="3" height="3" rx="1.5" fill="#2F3035")
+            rect(y="16" width="3" height="3" rx="1.5" fill="#2F3035")
+    .catalog__inner
+      aside.catalog__inner-aside.aside-filter
+        .aside-filter__tabs
+          a.aside-filter__link.tab.tab_active(href="#catalog-tab-1") Параметры
+          a.aside-filter__link.tab(href="#catalog-tab-2") по марке
+        .aside-filter__box
+          .aside-filter__content#catalog-tab-1.tabs-content.tabs-content_active
+            form.aside-filter__form.form-filter
+              ul.form-filter__list
+                li.form-filter__item-drop
+                  p.form-filter__title-drop.form-filter__title-drop_active Наличие
+                  .form-filter__content
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox" checked)
+                        | В наличие
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        | Под заказ
+                li.form-filter__item-drop
+                  p.form-filter__title-drop.form-filter__title-drop_active Новинки
+                  .form-filter__content.form-filter__content_radio
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="radio" checked name="radio")
+                        | Все
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="radio" name="radio")
+                        | Новинки
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="radio" name="radio")
+                        | Акции
+                li.form-filter__item-drop
+                  p.form-filter__title-drop.form-filter__title-drop_active Цена
+                  .form-filter__content
+                    input.js-range-slider(type="text" name="my_range" data-min="100000" data-max="500000" data-from="150000" data-to="300000")
+                li.form-filter__item-list
+                  .form-filter__content
+                    p.form-filter__title-select Мощность, л.с. 
+                    select.filter-style
+                      option(value="") 90
+                      option(value="") 130
+                      option(value="") 154
+                      option(value="") 230
+                      option(value="") 300
+                    
+          .aside-filter__content#catalog-tab-2.tabs-content
+      .catalog__inner-list
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item.product-item_sale(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-1.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango
+            p.product-item__price 1 049 500 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-2.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic
+            p.product-item__price 1 100 475 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item.product-item_sale(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-3.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP SeaDoo GTR 230hp X California green 
+            p.product-item__price 1 323 700 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper.product-item_not-available
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-4.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP SeaDoo GTR 230hp STD Black / Gulfstream
+            p.product-item__price 1 323 700 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-5.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP SeaDoo GTX 300hp LTD Liquid Metal
+            p.product-item__price 1 543 000 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-6.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP SeaDoo Spark 60hp 2 up
+            p.product-item__price 732 345 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item.product-item_sale(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-7.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP SeaDoo Spark GTS 90hp Rental
+            p.product-item__price 857 666 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item.product-item_sale(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-8.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP SeaDoo WAKE 230hp PRO Teal blue
+
+            p.product-item__price 1 229 711 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item.product-item_sale(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-9.png').default, alt="product")
+            h4.product-item__title Гидроцикл Spark 2-UP 900 Ho Ace Chili Pepper
+            p.product-item__price 587 440 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item.product-item_sale(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-10.png').default, alt="product")
+            h4.product-item__title Гидроцикл Spark 2-UP 900 Ho Ace Pineapple 
+            p.product-item__price 587 440 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper.product-item_not-available
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item.product-item_sale(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-11.png').default, alt="product")
+            h4.product-item__title Гидроцикл BRP Sea-doo Spark 2-UP 900 Ace Vanilla 
+            p.product-item__price 587 440 ₽
+            p.product-item__notify-text нет в наличии
+        .product-item__wrapper.product-item_not-available
+          button.product-item__favorite
+          button.product-item__basket
+            img(src=require('./images/basket-white.svg').default, alt="basket")
+          a.product-item__notify-link(href="#")
+            span Сообщить о поступлении
+          a.product-item.product-item_sale(href="#")
+            p.product-item__hover-text посмотреть товар
+            img.product-item__img(src=require('./images/gidrotsikl-12.png').default, alt="product")
+            h4.product-item__title Гидроцикл Spark 3-UP 900 HO Ace IBR Blueberry
+            p.product-item__price 587 440 ₽
+            p.product-item__notify-text нет в наличии
+        .pagination
+          ul.pagination__list
+           li.pagination__item.pagination__item_active
+            a(href="#") 1
+           li.pagination__item
+            a(href="#") 2
+           li.pagination__item
+            a(href="#") 3
+           li.pagination__item
+            a(href="#") 4
+           li.pagination__item
+            a(href="#") 5
+           li.pagination__item
+            a(href="#") ...
+           li.pagination__item
+            a(href="#") 11
