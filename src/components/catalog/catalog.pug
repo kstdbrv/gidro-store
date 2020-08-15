@@ -53,7 +53,7 @@ section.catalog.page-section
                   .form-filter__content.form-filter__content_radio
                     .form-filter__content-box
                       label.form-filter__content-label
-                        input.filter-style(type="radio" checked name="radio")
+                        input.filter-style(type="radio" name="radio" checked)
                         | Все
                     .form-filter__content-box
                       label.form-filter__content-label
@@ -68,15 +68,117 @@ section.catalog.page-section
                   .form-filter__content
                     input.js-range-slider(type="text" name="my_range" data-min="100000" data-max="500000" data-from="150000" data-to="300000")
                 li.form-filter__item-list
-                  .form-filter__content
+                  .form-filter__content.form-filter__content_select
                     p.form-filter__title-select Мощность, л.с. 
-                    select.filter-style
+                    select.filter-style.form-filter__select
                       option(value="") 90
                       option(value="") 130
                       option(value="") 154
                       option(value="") 230
                       option(value="") 300
-                    
+                li.form-filter__item-list
+                  .form-filter__content.form-filter__content_select
+                    p.form-filter__title-select Мощность двигателя, л.с. 
+                    select.filter-style.form-filter__select
+                      option(value="") 90
+                      option(value="") 130
+                      option(value="") 154
+                      option(value="") 230
+                      option(value="") 300
+                li.form-filter__item-list
+                  .form-filter__content.form-filter__content_select
+                    p.form-filter__title-select Макс. скорость 
+                    select.filter-style.form-filter__select
+                      option(value="") 90
+                      option(value="") 130
+                      option(value="") 154
+                      option(value="") 230
+                      option(value="") 300
+                li.form-filter__item-drop
+                  p.form-filter__title-drop.form-filter__title-drop_active Бренд
+                  .form-filter__content
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox" checked)
+                        | BRP
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox" checked)
+                        | Spark 2
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        | Spark 3
+                    .form-filter__content-more
+                      button.form-filter__content-more-btn(href="#") Показать еще
+                li.form-filter__item-drop
+                  p.form-filter__title-drop.form-filter__title-drop_active Модель
+                  .form-filter__content
+                    input.form-filter__content-model-search(type="text" placeholder="Введите модель")
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox" checked)
+                        | Sea-doo Spark 2
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox" checked)
+                        | SeaDoo Spark 90 
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        | SeaDoo GTI 155
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        | SeaDoo GTR 230
+                    .form-filter__content-more
+                      button.form-filter__content-more-btn(href="#") Показать еще
+                li.form-filter__item-drop.btn-checked
+                  p.form-filter__title-drop.form-filter__title-drop_active Акции
+                  .form-filter__content
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox" checked)
+                        span.btn-checked__text SALE
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        span.btn-checked__text NEW
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        span.btn-checked__text HIT
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        span.btn-checked__text ДИЛЕР
+                li.form-filter__item-drop
+                  p.form-filter__title-drop.form-filter__title-drop_active Страны
+                  .form-filter__content
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox" checked)
+                        | Россия
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox" checked)
+                        | Германия
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        | Китай
+                    .form-filter__content-box
+                      label.form-filter__content-label
+                        input.filter-style(type="checkbox")
+                        | CША
+                    .form-filter__content-more
+                      button.form-filter__content-more-btn(href="#") Показать еще
+                li.form-filter__item-bottom
+                  button.form-filter__send.form-filter__send_active(type="submit") ВЫБРАТЬ
+                  p.form-filter__extra Дополнительные параметры
+                  .form-filter__extra-content more params
+                  button.form-filter__btn-reset
+                   span.form-filter__btn-reset-text Сбросить фильтр
           .aside-filter__content#catalog-tab-2.tabs-content
       .catalog__inner-list
         .product-item__wrapper

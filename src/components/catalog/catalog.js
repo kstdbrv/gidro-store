@@ -2,7 +2,7 @@ $(document).ready(function () {
   
   $('.filter-style').styler();
 
-  $('.form-filter__title-drop').on('click', function () {
+  $('.form-filter__title-drop, .form-filter__extra').on('click', function () {
 
     $(this).toggleClass('form-filter__title-drop_active');
     $(this).next().slideToggle(200);
@@ -10,6 +10,6 @@ $(document).ready(function () {
 
   $(".js-range-slider").ionRangeSlider({
     type: "double",
-});
+  });
 
 });
