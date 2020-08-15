@@ -175,6 +175,8 @@
   &__title{
     font-weight: normal;
     padding: 14px 0 25px;
+    font-size: 18px;
+    line-height: 21px;
   }
   &__price{
     @extend %barlow-bold;

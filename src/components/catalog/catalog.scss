@@ -21,9 +21,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+
 }
 .filter-items{
-  button{
+  &__btn{
     font-size: 14px;
     line-height: 17px;
     color: #2F3035;
@@ -39,9 +40,16 @@
      &:last-child{
        margin: 0;
      }
-   }
+     &_active{
+      background-color: #1C62CD;
+      color: #fff;
+      opacity: 1;
+     }
+  } 
 }
 .filter-btn{
+  display: flex;
+  align-items: center;
   button{
     background:transparent;
     border:none;
@@ -53,13 +61,24 @@
       margin-left: 10px;
     }
   }
-  &__gred{
-   margin-right: 10px;
-  }
-  &__line{
-   opacity: 0.3;
+  &__button{
+    opacity: 0.3;
+    &_active{
+      opacity: 1;
+    }
+
   }
 }
+.select-filter{
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: 34px;
+  color: #2F3035;
+  border: 1px solid #D7D9DF;
+  padding: 7px 10px 7px 20px;
+  height: 33px;
+}
+
 .pagination{
   width: 100%;
   margin-top: 40px;
@@ -294,7 +313,7 @@
     &::after{
       position: absolute;
       content: "";
-      background-image: url(/assets/images/arrow-down.svg);
+      background-image: url('/assets/images/arrow-down.svg');
       right: 36px;
       bottom: 3px;
       width: 12px;
@@ -302,6 +321,9 @@
       transform: rotate(0);
     }
   }
+  .form-filter__title-drop_active.form-filter__extra::after{
+    transform: rotate(180deg);
+  } 
   &__extra-content{
     display: none;
   }
@@ -328,166 +350,171 @@
     }
   }
 }
-.jq-checkbox, .jq-radio{
-  background: #fff;
-  width: 14px;
-  height: 14px;
-  border:1px solid #C4C4C4;
-  border-radius: 1px;
-  vertical-align: -1px;
-  margin: 0px 8px 0 0;
-  box-shadow: none;
-}
-//jQuery Form Styler input
-.jq-checkbox.checked, .jq-radio.checked{
-  background: #1C62CD;
-  border:none;
-}
-.jq-checkbox.checked .jq-checkbox__div {
-  position: absolute;
-  width: 8px;
-  height: 6px;
-  margin: 4px 0 0 3px;
-  border-bottom: none;
-  border-left: none;
-  transform: rotate(0);
-  background-image:url('./images/checked.svg');
-}
-.jq-radio.checked .jq-radio__div {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-//ion-rangeslider
-.irs--flat.irs-with-grid {
+.product-item__wrapper_list{
   width: 100%;
-}
-.irs--flat {
-  width: 100%;
-  margin-top: -15px;
-}
-.irs-from, .irs-to, .irs-single{
-  display: none;
-}
-.irs--flat .irs-max, .irs--flat .irs-min {
-  top: 55px;
-  padding: 0;
-  text-shadow: none;
-  @extend %barlow-regular;
-  font-size: 14px;
-  line-height: 17px;
-  text-decoration-line: underline;
-  color:$mainFontColor;
-  background: none;
-  visibility: visible !important;
-  padding-left: 27px;
-}
-.irs-min,.irs-max{
-  &::before{
-    position: absolute;
-    left: 0;
-    bottom: 1px;
-    font-size: 14px;
-    line-height: 17px;
-    color: #C4C4C4;
-    text-decoration: none;
+  .product-item{
+    width: 100%;
   }
 }
-.irs-min::before{
-  content: 'oт';
-}
-.irs-max::before{
-  content: 'до';
-}
-.irs--flat .irs-line {
-  height: 1px;
-  background-color:  #E0E0E0;
-  border-radius: 0;
-}
-.irs--flat .irs-bar {
-  top: 24px;
-  height: 3px;
-  background-color:  #1C62CD;
-}
-.irs--flat .irs-handle {
-  top: 22px;
-  width: 8px;
-  height: 8px;
-  border-radius:50%;
-  background-color: #1C62CD;
-}
-.irs--flat .irs-handle>i:first-child {
-  display: none;
-}
-//jQuery Form Styler select
-.jq-selectbox__select {
-  @extend %barlow-regular;
-  font-size: 14px;
-  line-height: 17px;
-  color: #48494D;
-  height: 32px;
-  padding: 0 35px 0 10px;
-  background:transparent;
-  border-radius: 0;
-  box-shadow:none;
-  text-shadow: none;
-  border: none;
-}
-.jq-selectbox__trigger-arrow {
-  position: absolute;
-  top: 14px;
-  right: 12px;
-  width: 0;
-  height: 0;
-  border: none;
-}
-.jq-selectbox__trigger {
-  border-left:none;
-  background-image: url('/assets/images/arrow-down.svg');
-  margin-top: 6px;
-  margin-right: 20px;
-  width: 12px;
-  height: 8px;
-}
-.jq-selectbox__select:hover {
-  background: transparent;
-}
-.jq-selectbox.focused .jq-selectbox__select{
-  border:none;
-}
-.jq-selectbox__select:active {
-  background: transparent;
-  box-shadow: none;
-}
-.jq-selectbox__select:active {
-    background: rgba(0,0,0,0);
+   //jQuery Form Styler input
+   .jq-checkbox, .jq-radio{
+    background: #fff;
+    width: 14px;
+    height: 14px;
+    border:1px solid #C4C4C4;
+    border-radius: 1px;
+    vertical-align: -1px;
+    margin: 0px 8px 0 0;
     box-shadow: none;
-}
-.jq-selectbox__dropdown {
-  box-sizing: border-box;
-  width: 68px;
-   margin: -13px 0 0;
-  padding-top: 15px;
-  background: #FFFFFF;
-  border: 1px solid #E0E0E0;
-  border-radius: 0;
-  box-shadow: none;
-}
-.jq-selectbox li {
-  min-height: 18px;
-  padding: 5px 10px 6px;
-  color: rgba(0, 0, 0, 0.6);
-}
-.jq-selectbox li:hover {
-  background-color: rgba(107, 126, 172, 0.05);
-  color: rgba(0, 0, 0, 0.6);
-}
-.jq-selectbox li.selected {
-  background-color: rgba(107, 126, 172, 0.05);
-  color: rgba(0, 0, 0, 0.6);
-}
-.form-filter__title-drop_active.form-filter__extra::after{
-  transform: rotate(180deg);
-} 
+  }
+  .jq-checkbox.checked, .jq-radio.checked{
+    background: #1C62CD;
+    border:none;
+  }
+  .jq-checkbox.checked .jq-checkbox__div {
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    margin: 4px 0 0 3px;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(0);
+    background-image:url('./images/checked.svg');
+  }
+  .jq-radio.checked .jq-radio__div {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  //ion-rangeslider
+  .irs--flat.irs-with-grid {
+    width: 100%;
+  }
+  .irs--flat {
+    width: 100%;
+    margin-top: -15px;
+  }
+  .irs-from, .irs-to, .irs-single{
+    display: none;
+  }
+  .irs--flat .irs-max, .irs--flat .irs-min {
+    top: 55px;
+    padding: 0;
+    text-shadow: none;
+    @extend %barlow-regular;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color:$mainFontColor;
+    background: none;
+    visibility: visible !important;
+    padding-left: 27px;
+  }
+  .irs-min,.irs-max{
+    &::before{
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #C4C4C4;
+      text-decoration: none;
+    }
+  }
+  .irs-min::before{
+    content: 'oт';
+  }
+  .irs-max::before{
+    content: 'до';
+  }
+  .irs--flat .irs-line {
+    height: 1px;
+    background-color:  #E0E0E0;
+    border-radius: 0;
+  }
+  .irs--flat .irs-bar {
+    top: 24px;
+    height: 3px;
+    background-color:  #1C62CD;
+  }
+  .irs--flat .irs-handle {
+    top: 22px;
+    width: 8px;
+    height: 8px;
+    border-radius:50%;
+    background-color: #1C62CD;
+  }
+  .irs--flat .irs-handle>i:first-child {
+    display: none;
+  }
+  //jQuery Form Styler select
+  .jq-selectbox__select {
+    @extend %barlow-regular;
+    font-size: 14px;
+    line-height: 17px;
+    color: #48494D;
+    height: 32px;
+    padding: 0 35px 0 10px;
+    background:transparent;
+    border-radius: 0;
+    box-shadow:none;
+    text-shadow: none;
+    border: none;
+  }
+  .jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border: none;
+  }
+  .jq-selectbox__trigger {
+    border-left:none;
+    background-image: url('/assets/images/arrow-down.svg');
+    margin-top: 6px;
+    margin-right: 20px;
+    width: 12px;
+    height: 8px;
+  }
+  .jq-selectbox__select:hover {
+    background: transparent;
+  }
+  .jq-selectbox.focused .jq-selectbox__select{
+    border:none;
+  }
+  .jq-selectbox__select:active {
+    background: transparent;
+    box-shadow: none;
+  }
+  .jq-selectbox__select:active {
+      background: rgba(0,0,0,0);
+      box-shadow: none;
+  }
+  .jq-selectbox__dropdown {
+    box-sizing: border-box;
+    width: 68px;
+     margin: -13px 0 0;
+    padding-top: 15px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .jq-selectbox li {
+    min-height: 18px;
+    padding: 5px 10px 6px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .jq-selectbox li:hover {
+    background-color: rgba(107, 126, 172, 0.05);
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .jq-selectbox li.selected {
+    background-color: rgba(107, 126, 172, 0.05);
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+
 
 
