@@ -10,6 +10,7 @@ import './js/main'
 import './components/banner-section/banner-section'
 import './components/products/products'
 import './components/catalog/catalog'
+import './components/product-card/product-card'
 
 // SCSS
 import './assets/scss/main.scss'
