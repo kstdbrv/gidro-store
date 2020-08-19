@@ -1,0 +1,114 @@
+.card-tabs{
+  &__tabs{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #F0F0F4;
+    margin-bottom: 50px;
+  }
+  &__link{
+    opacity: 0.6;
+    margin: 22px 0;
+  }
+  &__link.tab_active{
+    margin: 22px 0 15px;
+    opacity: 1;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $mainColor;
+  }
+}
+.pickup-card{
+  &__search-lable{
+    position: relative;
+    color: rgba(47,48,53,0.7);
+    &::after{
+      position: absolute;
+      content: '';
+      right: 110px;
+      top: 4px;
+      background-image: url('./images/search.svg');
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__search-input{
+    background: #F0F0F4;
+    border-radius: 3px;
+    padding: 9px 37px 9px 17px;
+    margin-left: 17px;
+    border: none;
+    outline: none;
+    margin-right: 100px;
+    color :$mainColor;
+  }
+  &__pickup-lable{
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(47,48,53,0.7);
+    margin-left: 54px;
+  }
+  &__list-item{
+    display: flex;
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2F3035;
+    color: rgba(47,48,53,0.7);
+    border-bottom:1px solid rgba(47,48,53,0.1);
+    &_title{
+      color: #2F3035;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+  &__list-address{
+    width: 219px;
+    margin-right: 81px;
+  }
+  &__list-workhours{
+    width: 157px;
+    margin-right: 96px;
+    .workhours{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__list-avialable{
+    width: 140px;
+  }
+  &__list-num{
+    width: 104px;
+  }
+  &__list-btn{
+    margin-left: auto;
+    button{
+      display:block;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding: 10px 41px;
+      background: $mainColor;
+      border-radius: 3px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      transition: all .3s;
+      height: 50px;
+      &:hover{
+        color: $mainColor;
+        border-radius:3px;
+        background-color:#FFFFFF;
+        border: 1px solid $mainColor;   
+      }
+      &:active{
+        color: #FFFFFF;
+        background-color:$mainColor;
+        border: none;
+      }
+    }
+  }
+
+}

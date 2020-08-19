@@ -6,7 +6,11 @@ header.header
       .header-top__content
         .header-top__column 
           nav.header-top__menu.menu
-            ul.menu__list
+            .menu__icon.icon-menu
+             span
+             span
+             span
+            ul.menu__list.menu__body
               li.menu__item
                 a.menu__link(href="#") Магазины
               li.menu__item
@@ -15,7 +19,9 @@ header.header
                 a.menu__link(href="#") Доставка и оплата
         .header-top__column
           a.logo(href="#")
-           img.logo__img(src=require('./images/logo.svg').default, alt="logo")
+           picture
+             source(srcset=require("./images/logo-mobile.svg").default media="(max-width:640px)")
+             img.logo__img(src=require('./images/logo.svg').default, alt="logo")
         .header-top__column
           a.header-top__adress.adress-header(href="#") Москва,  ул. Науки  25
           ul.header-top__user-list.user-list-header
@@ -29,6 +35,73 @@ header.header
               a.user-list-header__link.user-list-header__link_basket(href="#")
                 img(src=require('./images/basket.svg').default, alt="basket")
                 p.user-list-header__basket-num 10
+  .menu-mobile
+    ul.menu-mobile__list
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          img.menu-mobile__img(src=require("./images/user.svg").default alt="icon")
+          p Войти
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+         img.menu-mobile__img(src=require("./images/user.svg").default alt="icon")
+         p Регистрация
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          img.menu-mobile__img(src=require("./images/hart.svg").default alt="icon")
+          p Избранное
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          img.menu-mobile__img(src=require("./images/basket.svg").default alt="icon")
+          p Корзина
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          img.menu-mobile__img(src=require("./images/storage.svg").default alt="icon")
+          p Магазины
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          img.menu-mobile__img(src=require("./images/discount.svg").default alt="icon")
+          p Акции
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          img.menu-mobile__img(src=require("./images/delivery.svg").default alt="icon")
+          p Доставка и оплата
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          p Квадроциклы
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          p Катера
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          p Гидроциклы
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          p Лодки
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          p Вездеходы
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          p Снегоходы
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          p Двигатели
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#")
+          p Запчасти
+      li.menu-mobile__adress
+        a.menu-mobile__link(href="#")
+        | Москва,
+        br
+        | ул. Науки
+  .menu__mobile-line-wrapper
+    ul.menu__mobile-line
+      li.menu__item-line
+        a.menu__link(href="#") Магазины
+      li.menu__item-line
+        a.menu__link(href="#") Акции
+      li.menu__item-line
+        a.menu__link(href="#") Доставка и оплата
   .header-bottom
     .container
       ul.header-botton__menu-categories.menu-categories-header

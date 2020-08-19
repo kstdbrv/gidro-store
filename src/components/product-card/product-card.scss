@@ -40,13 +40,13 @@
   &__link{
     font-size: 15px;
     line-height: 18px;
-    color: #1C62CD;
+    color: $mainColor;
     transition: all .2s;
     &:hover{
       color: #000;
     }
     &:active{
-      color: #1C62CD;
+      color: $mainColor;
       border:none;
     }
   }
@@ -73,7 +73,7 @@
   &__tabs-link.tab_active{
     @extend %sf-bold;
     color:$mainFontColor;
-    border-bottom: 2px solid #1C62CD;
+    border-bottom: 2px solid $mainColor;
     opacity: 1;
   }
   &__tabs-link{
@@ -105,9 +105,9 @@
   &__more{
     font-size: 14px;
     line-height: 17px;
-    border-bottom:1px solid #1C62CD;
+    border-bottom:1px solid $mainColor;
     padding-bottom: 1px;
-    color:#1C62CD;
+    color:$mainColor;
     margin-bottom: 45px;
     transition: all .2s;
     &:hover{
@@ -115,8 +115,8 @@
       color: #000;
     }
     &:active{
-      border-bottom: 1px solid #1C62CD;
-      color: #1C62CD;
+      border-bottom: 1px solid $mainColor;
+      color: $mainColor;
     }
   }
   &__btn{
@@ -128,7 +128,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 17px 53px;
-    background: #1C62CD;
+    background: $mainColor;
     border-radius: 3px;
     cursor: pointer;
     outline: none;
@@ -136,14 +136,14 @@
     transition: all .3s;
     height: 50px;
     &:hover{
-      color: #1C62CD;
+      color: $mainColor;
       border-radius:3px;
       background-color:#FFFFFF;
-      border: 1px solid #1C62CD;   
+      border: 1px solid $mainColor;   
     }
     &:active{
       color: #FFFFFF;
-      background-color:#1C62CD;
+      background-color:$mainColor;
       border: none;
     }
   }

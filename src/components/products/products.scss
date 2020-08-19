@@ -10,7 +10,7 @@
 .tabs-products{
   margin-bottom: 25px;
   .tab_active{
-    border-bottom: 2px solid #1C62CD;
+    border-bottom: 2px solid $mainColor;
     }
   &__link{
     margin-right: 50px;
@@ -38,6 +38,20 @@
      &_right{
        right: -20px;
     }
+    &:hover {
+      svg {
+        path {
+          fill: $mainColor;
+        }
+      }
+    }
+    &:active {
+      svg {
+        path {
+          fill: #1f1f1f;
+        }
+      }
+    }
   }
   .slick-slide img {
   display: inline;
@@ -57,7 +71,7 @@
     background: #FFFFFF;
     box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
     border-radius: 3px;
-    color:#1C62CD;
+    color:$mainColor;
     .product-item__hover-text{
       opacity: 1;
     }
@@ -101,7 +115,7 @@
       left: 0;
       content:"SALE";
       padding: 6px 15px;
-      background-color:#1C62CD;
+      background-color:$mainColor;
       letter-spacing: 0.07em;
       color: #FFFFFF;
       text-transform: uppercase;
@@ -139,7 +153,7 @@
     position: absolute;
     width: 60px;
     height: 40px;
-    background: #1C62CD;
+    background: $mainColor;
     border-radius: 10px 0px 0px 0px;
     bottom: 0;
     right: 0;
@@ -157,18 +171,18 @@
     right: 0;
     text-align: center;
     span{
-      border-bottom: 1px solid #1C62CD;
+      border-bottom: 1px solid $mainColor;
       font-size: 16px;
       line-height: 19px;
-      color: #1C62CD;
+      color: $mainColor;
       transition: all .2s;
       &:hover{
         border-bottom: 1px solid #000;
         color: #000;
       }
       &:active{
-        border-bottom: 1px solid #1C62CD;
-        color: #1C62CD;
+        border-bottom: 1px solid $mainColor;
+        color: $mainColor;
       }
     }
   }
@@ -203,13 +217,13 @@
     padding: 17px 43px 15px;
     margin-top: 35px;
     &:hover{
-      color: #1c62cd;
+      color: $mainColor;
       background-color: #fff;
-      outline: 1px solid #1c62cd;
+      outline: 1px solid $mainColor;
     }
     &:active{
       color: #fff;
-      background-color: #1c62cd;
+      background-color: $mainColor;
       outline: none;
     }
   }

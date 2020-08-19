@@ -39,7 +39,7 @@
     padding: 8px 12px;
     outline: none;
     border:none;
-    color:#1C62CD;
+    color:$mainColor;
   }
   &__input::placeholder{
     color: #C4C4C4;
@@ -53,7 +53,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #FFFFFF;
-    background-color:#1C62CD;
+    background-color:$mainColor;
     padding: 10px 16px 9px 16px;
     outline: none;
     border:none;
@@ -61,14 +61,14 @@
     transition: all .3s;
     &:hover{
       @extend %sf-bold;
-      color: #1C62CD;
+      color: $mainColor;
       border-radius:3px;
       background-color:#FFFFFF;
-      border: 1px solid #1C62CD;   
+      border: 1px solid $mainColor;   
     }
     &:active{
       color: #FFFFFF;
-      background-color:#1C62CD;
+      background-color:$mainColor;
       border: none;
     }
   }
@@ -117,6 +117,21 @@
   &__item{
     display: inline-block;
     padding-right: 30px;
+  }
+  &__link{
+    path {
+      opacity: 1;
+      fill: #2F3035;
+      transition: all .3s;
+    }
+    &:hover {
+      svg {
+        path {
+          opacity: 1;
+          fill: $mainColor;
+        }
+      }
+    }
   }
 }
 .bottom-footer{

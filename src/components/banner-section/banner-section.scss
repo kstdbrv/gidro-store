@@ -21,6 +21,20 @@
     padding: 0;
     z-index: 5;
     cursor: pointer;
+    &:hover {
+      svg {
+        path {
+          fill: $mainColor;
+        }
+      }
+    }
+    &:active {
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
      &_left{
       left: 20px;
      }
@@ -70,7 +84,7 @@
   &__info{
     color:#fff;
     padding: 8px 20px;
-    background-color:#1C62CD;
+    background-color:$mainColor;
     font-size: 12px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -82,7 +96,7 @@
     @extend %barlow-bold;
     font-size: 27px;
     line-height: 32px;
-    color: #1C62CD;
+    color: $mainColor;
     padding-right: 20px;
     margin-right: 5px;
     position: relative;
@@ -139,7 +153,7 @@
       @extend %barlow-bold;
       font-size: 18px;
       line-height: 22px;
-      color: #1C62CD;
+      color: $mainColor;
       display: block;
       padding-top: 6px;
     } 

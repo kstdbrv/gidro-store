@@ -41,7 +41,7 @@
        margin: 0;
      }
      &_active{
-      background-color: #1C62CD;
+      background-color: $mainColor;
       color: #fff;
       opacity: 1;
      }
@@ -97,8 +97,8 @@
       margin: 0;
     }
     &_active{
-      border: 2px solid #1C62CD;
-      color:#1C62CD;
+      border: 2px solid $mainColor;
+      color:$mainColor;
      }
   }
   a{
@@ -116,7 +116,7 @@
   &__link.tab_active{
       @extend %sf-bold;
       color: $mainFontColor;
-      border-bottom: 2px solid #1C62CD;
+      border-bottom: 2px solid $mainColor;
       padding-bottom: 7px;
   }
   &__link{
@@ -203,10 +203,10 @@
   &__content-more-btn{
     font-size: 14px;
     line-height: 17px;;
-    color: #1C62CD;
+    color: $mainColor;
     margin-top: 18px;
     border: none;
-    border-bottom: 1px solid #1C62CD;
+    border-bottom: 1px solid $mainColor;
     background-color: transparent;
     padding: 0;
     cursor: pointer;
@@ -217,8 +217,8 @@
       border-bottom: 1px solid #000;
     }
     &:active{
-      color: #1C62CD;
-      border-bottom: 1px solid #1C62CD;
+      color: $mainColor;
+      border-bottom: 1px solid $mainColor;
     }
   }
   &__content-model-search{
@@ -228,7 +228,7 @@
     margin-bottom: 10px;
     border: 1px solid #E0E0E0;
     outline: none;
-    color: #1C62CD;
+    color: $mainColor;
     font-size: 12px;
     &::placeholder{
       font-size: 12px;
@@ -268,7 +268,7 @@
       border:none;
     }
     .jq-checkbox.checked{
-      background: #1C62CD;
+      background: $mainColor;
     }
     .jq-checkbox__div{
       display: none;
@@ -290,13 +290,13 @@
     cursor: pointer;
     transition: all .3s;
     &_active{
-      background-color: #1C62CD;
+      background-color: $mainColor;
       color: #fff; 
     }
     &:hover{
-      color: #1C62CD;
+      color: $mainColor;
       border-radius:3px;
-      border: 1px solid #1C62CD;
+      border: 1px solid $mainColor;
       background-color: #fff; 
     }
     &:active{
@@ -341,8 +341,8 @@
     color: #C4C4C4;
     transition: all .3s;
     &:hover{
-      border-bottom: 1px solid #1C62CD;
-      color: #1C62CD;
+      border-bottom: 1px solid $mainColor;
+      color: $mainColor;
     }
     &:active{
       border-bottom: 1px solid #C4C4C4;
@@ -368,7 +368,7 @@
     box-shadow: none;
   }
   .jq-checkbox.checked, .jq-radio.checked{
-    background: #1C62CD;
+    background: $mainColor;
     border:none;
   }
   .jq-checkbox.checked .jq-checkbox__div {
@@ -435,14 +435,14 @@
   .irs--flat .irs-bar {
     top: 24px;
     height: 3px;
-    background-color:  #1C62CD;
+    background-color:  $mainColor;
   }
   .irs--flat .irs-handle {
     top: 22px;
     width: 8px;
     height: 8px;
     border-radius:50%;
-    background-color: #1C62CD;
+    background-color: $mainColor;
   }
   .irs--flat .irs-handle>i:first-child {
     display: none;

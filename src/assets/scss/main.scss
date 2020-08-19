@@ -13,8 +13,8 @@ body{
   font-size: $mainFontSize;
   color: $mainFontColor;
   line-height: $mainLineHeight;
-  min-width: $smPhoneWidth;
-  overflow-x: hidden;
+  min-width: 320px;
+/*   overflow-x: hidden; */
   position: relative;
 }
 *, *:before, *:after { box-sizing: border-box; }
@@ -46,7 +46,10 @@ ul, li {
   }
 }
 //
-
+//STYLE FOR menu-icon
+body.lock{
+  overflow: hidden;
+}
 // components
 @import "../../components/header/header";
 @import "../../components/banner-section/banner-section";
@@ -57,6 +60,8 @@ ul, li {
 @import "../../components/breadcrumbs/breadcrumbs";
 @import "../../components/catalog/catalog";
 @import "../../components/product-card/product-card";
+@import "../../components/card-tabs/card-tabs";
+
 
 
 
@@ -65,7 +70,7 @@ ul, li {
 
 
 /* html {
-  @media screen and (max-width: $desktopWidth) {
+  @media screen and (max-width: 1100px) {
 		font-size: 16px;
   }
   @media screen and (max-width: $tableWidth) {
