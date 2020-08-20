@@ -56,6 +56,36 @@
   .slick-slide img {
   display: inline;
  }
+ .slick-dots{
+   display: none;
+ }
+ @media (max-width: 1300px) {
+  .slick-dots{
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  .slick-dots li{
+    display: inline-block;
+    padding: 0 5px;
+  }
+  .slick-dots button{
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #C4C4C4;;
+    outline: none;
+    border:none;
+  }
+  .slick-dots .slick-active button{
+    background-color: $mainColor;
+  }
+ }
 }
 .product-item{
   border: 1px solid #CDCDCD;
@@ -165,7 +195,6 @@
   &__notify-link{
     display: none;
     position: absolute;
-
     bottom: 20px;
     left: 0;
     right: 0;
@@ -216,6 +245,9 @@
     background-color: #F0F0F4;
     padding: 17px 43px 15px;
     margin-top: 35px;
+    @media (max-width: 1300px) {
+      margin-top: 74px;
+    }
     &:hover{
       color: $mainColor;
       background-color: #fff;

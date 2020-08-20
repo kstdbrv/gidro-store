@@ -2,11 +2,20 @@
   margin-bottom: 25px;
   &__item{
    padding: 11px 26px;
+   @media (max-width:640px) {
+    padding: 5px 0;
+    margin-right: 15px;
+  }
   }
   &__item.tab_active{
      @extend %sf-bold;
     background-color: #F0F0F4;
     border-radius: 5px;
+    @media (max-width:640px) {
+      border-bottom: 2px solid $mainColor;
+      background-color: transparent;
+      border-radius: 0;
+    }
   }
 }
 .box-search{
@@ -15,6 +24,9 @@
     border: none;
     display: flex;
     justify-content: space-between;
+    @media (max-width:640px) {
+      position: relative;
+    }
   }
   &__input{
     padding: 15px 20px;
@@ -24,6 +36,9 @@
     color: $mainColor;
     outline: none;
     border: none;
+    @media (max-width:640px) {
+      padding-right: 40px;
+    }
     &::placeholder{
       font-size: 16px;
       line-height: 19px;
@@ -44,6 +59,16 @@
     border: none;
     margin-left: -3px;
     transition: all .3s;
+    @media (max-width:640px) {
+      font-size: 0;
+      padding: 17px;
+      background-color: transparent;
+      position: absolute;
+      background-image:url('./images/search.svg');
+      background-repeat: no-repeat;
+      right: 0;
+      top: 15px;
+    }
     &:hover{
       @extend %sf-bold;
       color: $mainColor;

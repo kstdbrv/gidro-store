@@ -33,4 +33,9 @@ $(document).ready(function () {
     type: "double",
   });
 
+  $('.aside__btn').on('click', function () {
+
+    $(this).next().slideToggle(400);
+  });
+
 });

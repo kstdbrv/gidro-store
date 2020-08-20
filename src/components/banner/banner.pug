@@ -1,4 +1,6 @@
 .banner.page-section
   .container
     a.banner__link(href="#")
-      img(src=require('./images/banner.png').default, alt="banner")
+      picture
+       source(srcset=require("./images/banner-mobile.png").default media="(max-width:320px)")
+       img(src=require('./images/banner.png').default, alt="banner")

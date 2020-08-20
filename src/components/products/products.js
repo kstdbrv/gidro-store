@@ -10,12 +10,44 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
-    speed: 800,
 /*     speed: 500,
     fade: true,
     cssEase: 'linear' */
+    responsive: [
+      {
+        breakpoint: 1301,
+        settings: {
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 870,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+        }
+      },
+      {
+        breakpoint: 590,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ]
   });
 
 

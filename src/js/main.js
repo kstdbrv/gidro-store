@@ -5,7 +5,7 @@ $(document).ready(function () {
     e.preventDefault();
 
     $($(this).siblings()).removeClass('tab_active');
-    $($(this).parent().siblings().find('div')).removeClass('tabs-content_active');
+    $($(this).parent().parent().siblings().find('div')).removeClass('tabs-content_active');
 
     $(this).addClass('tab_active');
     $($(this).attr('href')).addClass('tabs-content_active');

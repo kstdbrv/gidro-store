@@ -1,5 +1,8 @@
 .breadcrumbs{
   margin-bottom: 40px;
+  &__inner{
+    overflow-x: scroll;
+  }
   &__list-item{
     display: inline-block;
     padding-right: 16px;
@@ -8,6 +11,9 @@
     line-height: 18px;
     color: #C4C4C4;
     position: relative;
+    @media (max-width:640px){
+      margin-top: 20px;
+   }
     &::after{
       position: absolute;
       content: "";

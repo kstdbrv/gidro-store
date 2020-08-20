@@ -50,6 +50,15 @@ ul, li {
 body.lock{
   overflow: hidden;
 }
+//STYLE FOR mobile-scroll
+@media(max-width:968px){
+  .mobile-overflow{
+    width: 1000px;
+  }
+  .tabs-wrapper{
+    overflow-x: scroll;
+  }
+}
 // components
 @import "../../components/header/header";
 @import "../../components/banner-section/banner-section";

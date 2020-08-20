@@ -2,11 +2,12 @@ section.catalog.page-section
   .container
     h2.catalog__title Гидроциклы
     .catalog__filter.filter-catalog
-      .filter-catalog__items.filter-items
-        button.filter-items__btn.filter-items__btn_active Полноприводные
-        button.filter-items__btn от 5000
-        button.filter-items__btn BRP
-        button.filter-items__btn еще
+      .filter-catalog__wrapper
+        .filter-catalog__items.filter-items.mobile-overflow
+          button.filter-items__btn.filter-items__btn_active Полноприводные
+          button.filter-items__btn от 5000
+          button.filter-items__btn BRP
+          button.filter-items__btn еще
       .filter-catalog__btn.filter-btn
         select.filter-style.filter-btn__select.select-filter
           option(value="") По полулярности
@@ -29,6 +30,7 @@ section.catalog.page-section
             rect(y="8" width="3" height="3" rx="1.5" fill="#2F3035")
             rect(y="16" width="3" height="3" rx="1.5" fill="#2F3035")
     .catalog__inner
+      .aside__btn фильтр
       aside.catalog__inner-aside.aside-filter
         .aside-filter__tabs
           a.aside-filter__link.tab.tab_active(href="#catalog-tab-1") Параметры

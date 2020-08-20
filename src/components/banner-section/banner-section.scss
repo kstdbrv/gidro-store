@@ -1,14 +1,52 @@
 .banner-section{
+  .container{
+    @media (max-width:640px){
+      padding: 0;
+    }
+  }
   &__content{
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1200px) {
+      justify-content: space-around;
+    }
+    @media (max-width: 968px) {
+      margin-top: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }
 .slider-banner{
   max-width: 870px;
+  @media (max-width: 1200px) {
+    max-width: 640px;
+  }
+  @media (max-width: 968px) {
+    max-width: 100% !important;
+    margin-bottom: 25px;
+  }
+  &__item{
+    @media (max-width: 968px) {
+      text-align: center;
+    }
+  }
   &__img{
     object-fit: cover;
     min-height: 400px;
+    @media (max-width: 1200px) {
+      max-width: 640px;
+    }
+    @media (max-width: 968px) {
+      display: inline;
+      max-width: 100% !important;
+    }
+    @media (max-width: 640px) {
+     min-height: 200px;
+    }
+    @media (max-width: 440px) {
+      min-height: 164px;
+     }
   }
   &__btn{
     position: absolute;
@@ -48,6 +86,12 @@
     left: 0;
     right: 0;
     text-align: center;
+    @media (max-width: 640px) {
+      bottom: 25px;
+     }
+    @media (max-width: 440px) {
+      bottom: 15px;
+     }
   }
   .slick-dots li{
     display: inline-block;
@@ -63,10 +107,19 @@
     border-radius: 50%;
     background-color: transparent;
     outline: none;
+    @media (max-width: 640px) {
+      width: 7px;
+      height: 7px;
+     }
   }
   .slick-active button{
     background-color:#fff;
   }
+  .slick-slide img {
+    @media (max-width: 968px) {
+     display: inline-block;
+    }
+}
 }
 .sale-banner{
   max-width: 265px;

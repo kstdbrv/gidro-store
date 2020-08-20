@@ -1,21 +1,22 @@
 .search.page-section
   .container
     .search__content
-      .search__tabs.tabs-search
-        a.tabs-search__item.tab(href="#tab-1") Поиск по  номеру
-        a.tabs-search__item.tab.tab_active(href="#tab-2") Поиск по марке
-        a.tabs-search__item.tab(href="#tab-3") Поиск по названию товара
+      .tabs-wrapper
+        .search__tabs.tabs-search.mobile-overflow
+          a.tabs-search__item.tab(href="#tab-1") Поиск по  номеру
+          a.tabs-search__item.tab.tab_active(href="#tab-2") Поиск по марке
+          a.tabs-search__item.tab(href="#tab-3") Поиск по названию товара
       .search__box.box-search
         .box-search__item#tab-1.tabs-content
-          form.box-search__form(action="post")
+          form.box-search__form
             input.box-search__input(type="text" placeholder="Введите номер ")
             button.box-search__btn искать
         .box-search__item#tab-2.tabs-content.tabs-content_active
-          form.box-search__form(action="post")
+          form.box-search__form
             input.box-search__input(type="text" placeholder="Введите марку ")
             button.box-search__btn искать
         .box-search__item#tab-3.tabs-content
-          form.box-search__form(action="post")
+          form.box-search__form
             input.box-search__input(type="text" placeholder="Введите название товара ")
             button.box-search__btn искать
 

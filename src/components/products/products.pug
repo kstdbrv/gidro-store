@@ -2,13 +2,14 @@ section.products.page-section
   .container
     .products__content
       h3.products__title Популярные товары
-      .products__tabs.tabs-products
-         a.tabs-products__link.tab.tab_active(href="#product-tab-1") запчасти
-         a.tabs-products__link.tab(href="#product-tab-2") моторы
-         a.tabs-products__link.tab(href="#product-tab-3") шины 
-         a.tabs-products__link.tab(href="#product-tab-4") электроника
-         a.tabs-products__link.tab(href="#product-tab-5") инструменты
-         a.tabs-products__link.tab(href="#product-tab-6") аксессуары 
+      .tabs-wrapper
+        .products__tabs.tabs-products.mobile-overflow
+           a.tabs-products__link.tab.tab_active(href="#product-tab-1") запчасти
+           a.tabs-products__link.tab(href="#product-tab-2") моторы
+           a.tabs-products__link.tab(href="#product-tab-3") шины 
+           a.tabs-products__link.tab(href="#product-tab-4") электроника
+           a.tabs-products__link.tab(href="#product-tab-5") инструменты
+           a.tabs-products__link.tab(href="#product-tab-6") аксессуары 
       .products__box.tabs-box
         .tabs-box__content#product-tab-1.tabs-content.tabs-content_active
           .tabs-box__slider.product-slider
