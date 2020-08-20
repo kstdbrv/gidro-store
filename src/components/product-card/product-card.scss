@@ -2,12 +2,18 @@
   &__content{
     display: flex;
     justify-content:space-between;
+    @media (max-width:968px) {
+      flex-wrap: wrap;
+    }
   }
 }
 .img-card{
   text-align: center;
   width: 500px;
   position: relative;
+  @media (max-width:968px) {
+    width: 100%;
+  }
     &::before{
       position: absolute;
       padding: 13px 25px;
@@ -53,11 +59,28 @@
 }
 .content-card{
   width: 570px;
+    @media (max-width:968px) {
+      order: -1;
+    }
+  &__tabs{
+    @media (max-width:968px) {
+      display: none;
+    }
+  } 
+  &__box{
+    @media (max-width:968px) {
+      display: none;
+    }
+  }
   &__title{
     @extend %sf-bold;
     font-size: 30px;
     line-height: 36px;
     margin-bottom: 10px;
+    @media (max-width:640px) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
   &__code{
     font-size: 15px;
@@ -69,6 +92,12 @@
   &__buttons a{
     margin-right: 30px;
     margin-bottom: 50px;
+    @media (max-width:380px) {
+     margin: 0 20px 50px 0;
+    }
+    &:last-child{
+      margin: 0;
+    }
   }
   &__tabs-link.tab_active{
     @extend %sf-bold;
@@ -135,6 +164,13 @@
     border: none;
     transition: all .3s;
     height: 50px;
+    &_mobile{
+      display: none;
+      @media (max-width:968px) {
+        display: block;
+        margin: 40px auto 0;
+      }
+    }
     &:hover{
       color: $mainColor;
       border-radius:3px;

@@ -1,7 +1,9 @@
 .breadcrumbs{
   margin-bottom: 40px;
   &__inner{
-    overflow-x: scroll;
+    @media (max-width:815px){
+      overflow-x: scroll;
+   }
   }
   &__list-item{
     display: inline-block;

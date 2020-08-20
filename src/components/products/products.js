@@ -10,8 +10,8 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
+    autoplay: true,
+    autoplaySpeed: 2500,
 /*     speed: 500,
     fade: true,
     cssEase: 'linear' */
@@ -49,6 +49,5 @@ $(document).ready(function () {
       },
     ]
   });
-
 
 });

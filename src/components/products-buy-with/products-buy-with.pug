@@ -53,7 +53,7 @@ section.products.page-section
                   p.product-item__price 45 800 ₽
                   p.product-item__notify-text нет в наличии
             .product-slider__item
-              .product-item__wrapper.product-item__not-available
+              .product-item__wrapper.product-item_not-available
                 button.product-item__favorite
                 button.product-item__basket
                   img(src=require('./images/basket-white.svg').default, alt="basket")
@@ -75,7 +75,10 @@ section.products.page-section
                 a.product-item.product-item_sale(href="#")
                   p.product-item__hover-text посмотреть товар
                   img.product-item__img(src=require('./images/product-5.png').default, alt="product")
-                  h4.product-item__title Мужской костюм 3мм
+                  h4.product-item__title
+                   | Мужской костюм
+                   br
+                   | 3мм
                   p.product-item__price 7 000 ₽
                   p.product-item__notify-text нет в наличии
             .product-slider__item

@@ -14,7 +14,7 @@ body{
   color: $mainFontColor;
   line-height: $mainLineHeight;
   min-width: 320px;
-/*   overflow-x: hidden; */
+  overflow-x: hidden;
   position: relative;
 }
 *, *:before, *:after { box-sizing: border-box; }
@@ -51,13 +51,13 @@ body.lock{
   overflow: hidden;
 }
 //STYLE FOR mobile-scroll
-@media(max-width:968px){
+@media(max-width:815px){
   .mobile-overflow{
-    width: 1000px;
+    width:860px;
   }
   .tabs-wrapper{
     overflow-x: scroll;
-  }
+ }
 }
 // components
 @import "../../components/header/header";
@@ -70,6 +70,8 @@ body.lock{
 @import "../../components/catalog/catalog";
 @import "../../components/product-card/product-card";
 @import "../../components/card-tabs/card-tabs";
+@import "../../components/products-buy-with/products-buy-with";
+
 
 
 

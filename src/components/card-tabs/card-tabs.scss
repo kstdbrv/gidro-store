@@ -18,18 +18,25 @@
   }
 }
 .pickup-card{
+  &__top-line{
+    label{
+      &:nth-child(2){
+        margin-left: 150px;
+        @media (max-width:980px) {
+          margin-left: 30px;
+        }
+      }
+      @media (max-width:860px) {
+        width: 100%;
+        display: block;
+        margin-bottom: 25px;
+        margin-left: 0;
+      }
+    }
+  }
   &__search-lable{
     position: relative;
     color: rgba(47,48,53,0.7);
-    &::after{
-      position: absolute;
-      content: '';
-      right: 110px;
-      top: 4px;
-      background-image: url('./images/search.svg');
-      width: 16px;
-      height: 16px;
-    }
   }
   &__search-input{
     background: #F0F0F4;
@@ -38,8 +45,24 @@
     margin-left: 17px;
     border: none;
     outline: none;
-    margin-right: 100px;
     color :$mainColor;
+  }
+  &__search-button{
+    position: absolute;
+    background: transparent;
+    outline: none;
+    padding: 17px;
+    background-color: transparent;
+    position: absolute;
+    background-image:url('./images/search.svg');
+    background-repeat: no-repeat;
+    right: 0;
+    top: 1px;
+    border:none;
+    cursor: pointer;
+    @media (max-width:860px) {
+      display: none;
+    }
   }
   &__pickup-lable{
     font-size: 17px;
@@ -55,10 +78,21 @@
     color: #2F3035;
     color: rgba(47,48,53,0.7);
     border-bottom:1px solid rgba(47,48,53,0.1);
+    @media (max-width:940px) {
+      display: block;
+     }
+     @media (max-width:940px) {
+      div{
+        margin-bottom: 15px;
+      }
+     }
     &_title{
       color: #2F3035;
       font-size: 20px;
       line-height: 24px;
+      @media (max-width:940px) {
+       display: none;
+      }
     }
   }
   &__list-address{

@@ -1,12 +1,13 @@
 .breadcrumbs
   .container
-    ul.breadcrumbs__list
-      li.breadcrumbs__list-item
-        a(href="index.html") Главная
-      li.breadcrumbs__list-item
-        a(href="catalog.html") Гидроциклы
-      li.breadcrumbs__list-item
-        a(href="#") Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic
+    .breadcrumbs__inner
+      ul.breadcrumbs__list.mobile-overflow
+        li.breadcrumbs__list-item
+          a(href="index.html") Главная
+        li.breadcrumbs__list-item
+          a(href="catalog.html") Гидроциклы
+        li.breadcrumbs__list-item
+          a(href="#") Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic
 section.product-card.page-section
   .container
     .product-card__content
@@ -15,6 +16,7 @@ section.product-card.page-section
         p.img-card__price-old 1 200 475 ₽
         p.img-card__price-new 1 100 475 ₽
         a.img-card__link(href="#") Нашли дешевле? Снизим цену!
+        button.content-card__btn.content-card__btn_mobile купить
       .product-card__content-box.content-card
         h1.content-card__title Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic
         p.content-card__code Код товара: 	366666-2
@@ -26,8 +28,9 @@ section.product-card.page-section
           a.rate(href="#")
             .rate-yo(data-rateyo-rating="4")
         .content-card__tabs
-           a.content-card__tabs-link.tab.tab_active(href="#content-card-tab-1") Характеристики
-           a.content-card__tabs-link.tab(href="#content-card-tab-2") Наличие в магазине
+          .tabs-wrapper
+             a.content-card__tabs-link.tab.tab_active(href="#content-card-tab-1") Характеристики
+             a.content-card__tabs-link.tab(href="#content-card-tab-2") Наличие в магазине
         .content-card__box
           .content-card__content#content-card-tab-1.tabs-content.tabs-content_active
             ul.content-card__list
@@ -48,6 +51,7 @@ section.product-card.page-section
                 .content-card__item-right 2018
             a.content-card__more(href="#") Показать еще
             button.content-card__btn купить
+              
           .content-card__content#content-card-tab-2.tabs-content
             p CONTENT 2
 

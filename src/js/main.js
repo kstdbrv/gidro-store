@@ -9,6 +9,8 @@ $(document).ready(function () {
 
     $(this).addClass('tab_active');
     $($(this).attr('href')).addClass('tabs-content_active');
+
+    $('.product-slider').slick('setPosition');
   });
 });
 //

@@ -1,13 +1,14 @@
 section.card-tabs.page-section
   .container
-    .card-tabs__tabs
-        a.card-tabs__link.tab(href="#product-card-tab-1") О товаре
-        a.card-tabs__link.tab(href="#product-card-tab-2") Характеристики
-        a.card-tabs__link.tab(href="#product-card-tab-3") Отзывы
-        a.card-tabs__link.tab.tab_active(href="#product-card-tab-4") Самовывоз
-        a.card-tabs__link.tab(href="#product-card-tab-5") Доставка
-        a.card-tabs__link.tab(href="#product-card-tab-6") Cервис
-        a.card-tabs__link.tab(href="#product-card-tab-7") Гарантия
+    .tabs-wrapper
+      .card-tabs__tabs.mobile-overflow
+         a.card-tabs__link.tab(href="#product-card-tab-1") О товаре
+         a.card-tabs__link.tab(href="#product-card-tab-2") Характеристики
+         a.card-tabs__link.tab(href="#product-card-tab-3") Отзывы
+         a.card-tabs__link.tab.tab_active(href="#product-card-tab-4") Самовывоз
+         a.card-tabs__link.tab(href="#product-card-tab-5") Доставка
+         a.card-tabs__link.tab(href="#product-card-tab-6") Cервис
+         a.card-tabs__link.tab(href="#product-card-tab-7") Гарантия
     .card-tabs__box
       .card-tabs__content#product-card-tab-1.tabs-content
         p CONTENT 1
@@ -16,21 +17,22 @@ section.card-tabs.page-section
       .card-tabs__content#product-card-tab-3.tabs-content
         p CONTENT 3
       .card-tabs__content#product-card-tab-4.tabs-content.tabs-content_active
-        form.card-tabs__pickup.pickup-card(action="")
+        form.card-tabs__pickup.pickup-card
           .pickup-card__top-line
-            lable.pickup-card__search-lable Магазин
+            label.pickup-card__search-lable Магазин
               input.pickup-card__search-input(type="text")
-            lable.pickup-card__pickup-lable
+              button.pickup-card__search-button
+            label.pickup-card__pickup-lable
               input.pickup-card__pickup-input.filter-style(type="radio" checked name="pickup")
               | Забрать сегодня
-            lable.pickup-card__pickup-lable
+            label.pickup-card__pickup-lable
               input.filter-style.pickup-card__pickup-input(type="radio" name="pickup")
               | Забрать в течение недели
           ul.pickup-card__list
             li.pickup-card__list-item.pickup-card__list-item_title
               .pickup-card__list-address Адрес
-              .pickup-card__list-workhours.p Режим работы
-              .pickup-card__list-avialable.p Доступно
+              .pickup-card__list-workhours Режим работы
+              .pickup-card__list-avialable Доступно
               .pickup-card__list Количество
               .pickup-card__list
             li.pickup-card__list-item

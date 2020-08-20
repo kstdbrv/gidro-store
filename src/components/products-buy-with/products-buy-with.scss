@@ -1,0 +1,15 @@
+.products{
+  .product-item{
+    &__title{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    img{
+      object-fit: contain;
+    }
+    &__img{
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

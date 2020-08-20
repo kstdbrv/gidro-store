@@ -105,7 +105,7 @@
     transform: translate(-100%);
     transition: all .3s;
     position: absolute;
-    z-index: 10;
+    z-index: 15;
     &.active{
      transform: translate(0%);
     }
