@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
+
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
@@ -25,9 +26,9 @@ module.exports = {
     app: ['@babel/polyfill', PATHS.src],
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[chunkhash].js`,
+    filename: `./${PATHS.assets}js/[name].[chunkhash].js`,
     path: PATHS.dist,
-    publicPath: '/'
+/*     publicPath: '/' */
   },
   optimization: {
     splitChunks: {
@@ -100,7 +101,9 @@ module.exports = {
       include: '/fonts/',
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: `${PATHS.assets}/fonts`,
+        publicPath: `${PATHS.assets}fonts`
     }
     },
     {
@@ -110,6 +113,7 @@ module.exports = {
       options: {
         name: '[name].[ext]',
         outputPath: `${PATHS.assets}/images`,
+        publicPath: `${PATHS.assets}images`
     }
     },
     {
@@ -148,7 +152,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[contenthash].css`,
+      filename: '[name].[contenthash].css'
+      /* filename: `${PATHS.assets}css/[name].[contenthash].css` */
     }),
     new CopyWebpackPlugin({
       patterns: [
