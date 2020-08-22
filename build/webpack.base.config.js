@@ -102,8 +102,8 @@ module.exports = {
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
-        outputPath: `${PATHS.assets}/fonts`,
-        publicPath: `${PATHS.assets}fonts`
+/*         outputPath: `${PATHS.assets}fonts`,
+        publicPath: `${PATHS.assets}fonts` */
     }
     },
     {
@@ -112,7 +112,7 @@ module.exports = {
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
-        outputPath: `${PATHS.assets}/images`,
+        outputPath: `${PATHS.assets}images`,
         publicPath: `${PATHS.assets}images`
     }
     },
