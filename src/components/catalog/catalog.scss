@@ -157,6 +157,8 @@
   margin-right: 10px;
   @media (max-width:640px){
     display: none;
+    margin: 0 auto;
+    width: 65%;
   }
   &__tabs{
     display: flex;
@@ -367,7 +369,7 @@
     &::after{
       position: absolute;
       content: "";
-      background-image: url('/assets/images/arrow-down.svg');
+      background-image: url('./images/arrow-down.svg');
       right: 36px;
       bottom: 3px;
       width: 12px;
@@ -525,7 +527,7 @@
   }
   .jq-selectbox__trigger {
     border-left:none;
-    background-image: url('/assets/images/arrow-down.svg');
+    background-image: url('./images/arrow-down.svg');
     margin-top: 6px;
     margin-right: 20px;
     width: 12px;

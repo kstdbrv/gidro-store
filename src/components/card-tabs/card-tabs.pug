@@ -1,5 +1,4 @@
 section.card-tabs.page-section
-  .container
     .tabs-wrapper
       .card-tabs__tabs.mobile-overflow
          a.card-tabs__link.tab(href="#product-card-tab-1") О товаре
@@ -10,89 +9,90 @@ section.card-tabs.page-section
          a.card-tabs__link.tab(href="#product-card-tab-6") Cервис
          a.card-tabs__link.tab(href="#product-card-tab-7") Гарантия
     .card-tabs__box
-      .card-tabs__content#product-card-tab-1.tabs-content
-        p CONTENT 1
-      .card-tabs__content#product-card-tab-2.tabs-content
-        p CONTENT 2
-      .card-tabs__content#product-card-tab-3.tabs-content
-        p CONTENT 3
-      .card-tabs__content#product-card-tab-4.tabs-content.tabs-content_active
-        form.card-tabs__pickup.pickup-card
-          .pickup-card__top-line
-            label.pickup-card__search-lable Магазин
-              input.pickup-card__search-input(type="text")
-              button.pickup-card__search-button
-            label.pickup-card__pickup-lable
-              input.pickup-card__pickup-input.filter-style(type="radio" checked name="pickup")
-              | Забрать сегодня
-            label.pickup-card__pickup-lable
-              input.filter-style.pickup-card__pickup-input(type="radio" name="pickup")
-              | Забрать в течение недели
-          ul.pickup-card__list
-            li.pickup-card__list-item.pickup-card__list-item_title
-              .pickup-card__list-address Адрес
-              .pickup-card__list-workhours Режим работы
-              .pickup-card__list-avialable Доступно
-              .pickup-card__list Количество
-              .pickup-card__list
-            li.pickup-card__list-item
-              .pickup-card__list-address Москва, ул. Науки 25
-              .pickup-card__list-workhours
-                .workhours
-                  span пн-сб: 
-                  span 08:00-19:00  
-                .workhours
-                  span вс:
-                  span 09:00-17:00
-              .pickup-card__list-avialable В наличии
-              .pickup-card__list-num 1
-              .pickup-card__list-btn
-                button(type="submit") КУПИТЬ
-            li.pickup-card__list-item
-              .pickup-card__list-address Москва, ул.  Южная 134
-              .pickup-card__list-workhours
-                .workhours
-                  span пн-сб: 
-                  span 08:00-19:00  
-                .workhours
-                  span вс:
-                  span 09:00-17:00
-              .pickup-card__list-avialable В наличии
-              .pickup-card__list-num 2
-              .pickup-card__list-btn
-                button(type="submit") КУПИТЬ
-            li.pickup-card__list-item
-              .pickup-card__list-address
-               | Санкт-Петербург,
-               br
-               | ул. Красная 19
-              .pickup-card__list-workhours
-                .workhours
-                  span пн-сб: 
-                  span 08:00-19:00  
-                .workhours
-                  span вс:
-                  span 09:00-17:00
-              .pickup-card__list-avialable Нет в наличии 
-              .pickup-card__list-num 0
-              .pickup-card__list-btn
-                button(type="submit") КУПИТЬ
-            li.pickup-card__list-item
-              .pickup-card__list-address Киев, ул Шевченко 167
-              .pickup-card__list-workhours
-                .workhours
-                  span пн-сб: 
-                  span 08:00-19:00  
-                .workhours
-                  span вс:
-                  span 09:00-17:00
-              .pickup-card__list-avialable Нет в наличии
-              .pickup-card__list-num 0
-              .pickup-card__list-btn
-                button(type="submit") КУПИТЬ    
-      .card-tabs__content#product-card-tab-5.tabs-content
-        p CONTENT 5
-      .card-tabs__content#product-card-tab-6.tabs-content
-        p CONTENT 6
-      .card-tabs__content#product-card-tab-7.tabs-content
-        p CONTENT 7
+      .container
+        .card-tabs__content#product-card-tab-1.tabs-content
+          p CONTENT 1
+        .card-tabs__content#product-card-tab-2.tabs-content
+          p CONTENT 2
+        .card-tabs__content#product-card-tab-3.tabs-content
+          p CONTENT 3
+        .card-tabs__content#product-card-tab-4.tabs-content.tabs-content_active
+          form.card-tabs__pickup.pickup-card
+            .pickup-card__top-line
+              label.pickup-card__search-lable Магазин
+                input.pickup-card__search-input(type="text")
+                button.pickup-card__search-button
+              label.pickup-card__pickup-lable
+                input.pickup-card__pickup-input.filter-style(type="radio" checked name="pickup")
+                | Забрать сегодня
+              label.pickup-card__pickup-lable
+                input.filter-style.pickup-card__pickup-input(type="radio" name="pickup")
+                | Забрать в течение недели
+            ul.pickup-card__list
+              li.pickup-card__list-item.pickup-card__list-item_title
+                .pickup-card__list-address Адрес
+                .pickup-card__list-workhours Режим работы
+                .pickup-card__list-avialable Доступно
+                .pickup-card__list Количество
+                .pickup-card__list
+              li.pickup-card__list-item
+                .pickup-card__list-address Москва, ул. Науки 25
+                .pickup-card__list-workhours
+                  .workhours
+                    span пн-сб: 
+                    span 08:00-19:00  
+                  .workhours
+                    span вс:
+                    span 09:00-17:00
+                .pickup-card__list-avialable В наличии
+                .pickup-card__list-num 1
+                .pickup-card__list-btn
+                  button(type="submit") КУПИТЬ
+              li.pickup-card__list-item
+                .pickup-card__list-address Москва, ул.  Южная 134
+                .pickup-card__list-workhours
+                  .workhours
+                    span пн-сб: 
+                    span 08:00-19:00  
+                  .workhours
+                    span вс:
+                    span 09:00-17:00
+                .pickup-card__list-avialable В наличии
+                .pickup-card__list-num 2
+                .pickup-card__list-btn
+                  button(type="submit") КУПИТЬ
+              li.pickup-card__list-item
+                .pickup-card__list-address
+                 | Санкт-Петербург,
+                 br
+                 | ул. Красная 19
+                .pickup-card__list-workhours
+                  .workhours
+                    span пн-сб: 
+                    span 08:00-19:00  
+                  .workhours
+                   span вс:
+                    span 09:00-17:00
+                .pickup-card__list-avialable Нет в наличии 
+                .pickup-card__list-num 0
+                .pickup-card__list-btn
+                  button(type="submit") КУПИТЬ
+              li.pickup-card__list-item
+                .pickup-card__list-address Киев, ул Шевченко 167
+                .pickup-card__list-workhours
+                  .workhours
+                    span пн-сб: 
+                    span 08:00-19:00  
+                  .workhours
+                    span вс:
+                    span 09:00-17:00
+                .pickup-card__list-avialable Нет в наличии
+                .pickup-card__list-num 0
+                .pickup-card__list-btn
+                  button(type="submit") КУПИТЬ    
+        .card-tabs__content#product-card-tab-5.tabs-content
+          p CONTENT 5
+        .card-tabs__content#product-card-tab-6.tabs-content
+          p CONTENT 6
+        .card-tabs__content#product-card-tab-7.tabs-content
+          p CONTENT 7

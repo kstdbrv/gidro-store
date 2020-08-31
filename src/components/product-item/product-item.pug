@@ -1,0 +1,17 @@
+mixin product(src)
+    .product-item__wrapper
+      button.product-item__favorite
+      button.product-item__basket
+        img(src=require('../../components/catalog/images/basket-white.svg').default, alt="basket")
+      a.product-item__notify-link(href="#")
+        span Сообщить о поступлении
+      a.product-item.product-item_sale(href="product-page.html")
+        p.product-item__hover-text посмотреть товар
+        img.product-item__img(src=require(`${src}`).default, alt="product")
+        h4.product-item__title Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango
+        p.product-item__price 1 049 500 ₽
+        p.product-item__notify-text нет в наличии
+
+
+            //- img(src=require('./images/basket-white.svg').default, alt="basket")
+

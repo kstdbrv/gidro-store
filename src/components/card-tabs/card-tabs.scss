@@ -4,7 +4,10 @@
     justify-content: space-around;
     align-items: center;
     background: #F0F0F4;
-    margin-bottom: 50px;
+    margin: 0 15px 50px;
+    @media (max-width:815px) {
+      margin: 0 0 50px;
+    }
   }
   &__link{
     opacity: 0.6;
@@ -19,11 +22,17 @@
 }
 .pickup-card{
   &__top-line{
+    @media (max-width:860px) {
+      text-align: center;
+    }
     label{
       &:nth-child(2){
         margin-left: 150px;
         @media (max-width:980px) {
           margin-left: 30px;
+        }
+        @media (max-width:860px) {
+          margin-left: 0 !important;
         }
       }
       @media (max-width:860px) {
@@ -46,6 +55,11 @@
     border: none;
     outline: none;
     color :$mainColor;
+    @media (max-width:390px) {
+      margin-left: 0;
+      width: 100%;
+    }
+
   }
   &__search-button{
     position: absolute;
@@ -78,19 +92,20 @@
     color: #2F3035;
     color: rgba(47,48,53,0.7);
     border-bottom:1px solid rgba(47,48,53,0.1);
-    @media (max-width:940px) {
+    @media (max-width:840px) {
       display: block;
      }
-     @media (max-width:940px) {
+     @media (max-width:840px) {
       div{
         margin-bottom: 15px;
+        margin: 0 auto 15px;
       }
      }
     &_title{
       color: #2F3035;
       font-size: 20px;
       line-height: 24px;
-      @media (max-width:940px) {
+      @media (max-width:900px) {
        display: none;
       }
     }
@@ -98,6 +113,12 @@
   &__list-address{
     width: 219px;
     margin-right: 81px;
+    @media (max-width:940px) {
+      margin-right: 10px;
+     }
+     @media (max-width:840px) {
+      width: 159px;
+    }
   }
   &__list-workhours{
     width: 157px;
@@ -112,6 +133,9 @@
   }
   &__list-num{
     width: 104px;
+    @media (max-width:840px) {
+      width: 12px;
+    }
   }
   &__list-btn{
     margin-left: auto;
@@ -141,6 +165,9 @@
         color: #FFFFFF;
         background-color:$mainColor;
         border: none;
+      }
+      @media (max-width:840px) {
+        margin:0 auto;
       }
     }
   }

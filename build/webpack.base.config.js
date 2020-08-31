@@ -26,9 +26,8 @@ module.exports = {
     app: ['@babel/polyfill', PATHS.src],
   },
   output: {
-    filename: `./${PATHS.assets}js/[name].[chunkhash].js`,
-    path: PATHS.dist,
-/*     publicPath: '/' */
+    filename: `${PATHS.assets}js/[name].[chunkhash].js`,
+    path: PATHS.dist
   },
   optimization: {
     splitChunks: {
@@ -56,34 +55,6 @@ module.exports = {
       use: ['pug-loader']
     },
     {
-      test: /\.ts$/,
-      exclude: '/node_modules/',
-      loader: 'babel-loader',
-      options: {
-        presets: [
-          '@babel/preset-env',
-          '@babel/preset-typescript',
-          {
-            'plugins': ['@babel/plugin-proposal-class-properties'
-            ]
-          }]
-    }
-    },
-    {
-      test: /\.jsx$/,
-      exclude: '/node_modules/',
-      loader: 'babel-loader',
-      options: {
-        presets: [
-          '@babel/preset-env',
-          '@babel/preset-react',
-          {
-            'plugins': ['@babel/plugin-proposal-class-properties'
-            ]
-          }]
-      }
-    },
-    {
       test: /\.js$/,
       exclude: '/node_modules/',
       loader: 'babel-loader',
@@ -97,18 +68,16 @@ module.exports = {
       }
     },
     {
-      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      include: '/fonts/',
+      test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
-/*         outputPath: `${PATHS.assets}fonts`,
-        publicPath: `${PATHS.assets}fonts` */
+        outputPath: `${PATHS.assets}fonts`,
+        publicPath: `${PATHS.assets}fonts`
     }
     },
     {
       test: /\.(png|jpg|gif|svg)$/,
-      exclude: '/fonts/',
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
@@ -123,9 +92,11 @@ module.exports = {
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: {
+            sourceMap: true,
+          }
         }, {
-          loader: 'resolve-url-loader',
+          loader: 'resolve-url-loader'
         }, {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
@@ -134,31 +105,15 @@ module.exports = {
           options: { sourceMap: true }
         }
       ]
-    }, {
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        MiniCssExtractPlugin.loader,
-        {
-          loader: 'css-loader',
-          options: { sourceMap: true }
-        }, {
-          loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `./postcss.config.js` } }
-        }
-      ]
-    }]
+    },]
   },
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
-      /* filename: `${PATHS.assets}css/[name].[contenthash].css` */
     }),
     new CopyWebpackPlugin({
       patterns: [
-        /* { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` }, */
-        { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
         { from: `${PATHS.src}/static`, to: '' }, 
       ],
     }),
