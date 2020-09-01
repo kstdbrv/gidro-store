@@ -13,6 +13,7 @@ import './components/products/products'
 import './components/catalog/catalog'
 import './components/product-card/product-card'
 import './components/footer/footer'
+import './components/product-item/product-item'
 
 // SCSS
 import './assets/scss/main.scss'

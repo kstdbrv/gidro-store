@@ -1,17 +1,16 @@
-mixin product(src)
-    .product-item__wrapper
-      button.product-item__favorite
-      button.product-item__basket
-        img(src=require('../../components/catalog/images/basket-white.svg').default, alt="basket")
-      a.product-item__notify-link(href="#")
-        span Сообщить о поступлении
-      a.product-item.product-item_sale(href="product-page.html")
-        p.product-item__hover-text посмотреть товар
-        img.product-item__img(src=require(`${src}`).default, alt="product")
-        h4.product-item__title Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango
-        p.product-item__price 1 049 500 ₽
-        p.product-item__notify-text нет в наличии
+mixin product(img,available,sale)
+  .product-item__wrapper(class=available)
+    button.product-item__favorite
+    button.product-item__basket
+      img(src=require('@components/products/images/basket-white.svg').default, alt="basket")
+    a.product-item__notify-link(href="#")
+      span Сообщить о поступлении
+    a(href="#").product-item(class=sale)
+      p.product-item__hover-text посмотреть товар
+      img(src=require(`@components/products/images/${img}.png`).default, alt="product")
+      h4.product-item__title BRP Audio-Premium System
+      p.product-item__price 68 000 ₽
+      p.product-item__notify-text нет в наличии
+//- +product('product-popular-3','product-item_not-available','product-item_sale')
 
-
-            //- img(src=require('./images/basket-white.svg').default, alt="basket")
 
