@@ -100,31 +100,10 @@
     font-size: 14px;
     line-height: 17px;
   }
-  &__btn{
+  .btn{
     font-size: 11px;
     line-height: 13px;
-    text-align: center;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    background-color:$mainColor;
     padding: 10px 16px 9px 16px;
-    outline: none;
-    border:none;
-    cursor: pointer;
-    transition: all .3s;
-    &:hover{
-      @extend %sf-bold;
-      color: $mainColor;
-      border-radius:3px;
-      background-color:#FFFFFF;
-      border: 1px solid $mainColor;   
-    }
-    &:active{
-      color: #FFFFFF;
-      background-color:$mainColor;
-      border: none;
-    }
   }
 }
 .info-footer{

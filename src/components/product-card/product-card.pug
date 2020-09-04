@@ -12,19 +12,19 @@ section.product-card.page-section
   .container
     .product-card__content
       .product-card__img-box.img-card.product-item_sale
-        img.img-card__img(src=require("./images/gidrotsikl-large.png").default, alt="gidro")
+        img.img-card__img(src=require("@components/product-card/images/gidrotsikl-large.png").default, alt="gidro")
         p.img-card__price-old 1 200 475 ₽
         p.img-card__price-new 1 100 475 ₽
         a.img-card__link(href="#") Нашли дешевле? Снизим цену!
-        button.content-card__btn.content-card__btn_mobile купить
+        +button({text:'купить',isMobile:true})
       .product-card__content-box.content-card
         h1.content-card__title Гидроцикл BRP SeaDoo GTI 155hp SE Long Blue Metallic
         p.content-card__code Код товара: 	366666-2
         .content-card__buttons
           a.content-card__favorite(href="#")
-            img(src=require("./images/heart.svg").default, alt="favorite")
+            img(src=require("@components/product-card/images/heart.svg").default, alt="favorite")
           a.content-card__compare(href="#")
-            img(src=require("./images/compare.svg").default, alt="compare")
+            img(src=require("@components/product-card/images/compare.svg").default, alt="compare")
           a.rate(href="#")
             .rate-yo(data-rateyo-rating="4")
         .content-card__tabs
@@ -50,8 +50,7 @@ section.product-card.page-section
                 .content-card__item-left Год выпуска
                 .content-card__item-right 2018
             a.content-card__more(href="#") Показать еще
-            button.content-card__btn купить
-              
+            +button({text:'купить'})
           .content-card__content#content-card-tab-2.tabs-content
             p CONTENT 2
 

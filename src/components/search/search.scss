@@ -45,7 +45,23 @@
       color: #656464;
     }
   }
-  &__btn{
+  .btn{
+    @extend %sf-bold;
+    font-size: 14px;
+    padding: 17px 38px 16px 40px;
+    margin-left: -3px;
+    @media (max-width:640px) {
+      font-size: 0;
+      padding: 17px;
+      background-color: transparent;
+      position: absolute;
+      background-image:url('./images/search.svg');
+      background-repeat: no-repeat;
+      right: 0;
+      top: 15px;
+    }
+  }
+/*   &__btn{
     @extend %sf-bold;
     font-size: 14px;
     letter-spacing: 0.12em;
@@ -81,5 +97,5 @@
       background-color:$mainColor;
       border: none;
     }
-  }
+  } */
 }

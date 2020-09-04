@@ -1,0 +1,7 @@
+mixin button(options)
+  -
+    var btnClassName = "btn"
+    btnClassName += options.isMobile ? " btn_mobile" : ""
+  button(class= btnClassName type="submit")
+    span=options.text
+//- +button({text:'выбрать',isMobile:true})

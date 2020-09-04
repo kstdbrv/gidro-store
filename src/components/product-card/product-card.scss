@@ -148,39 +148,17 @@
       color: $mainColor;
     }
   }
-  &__btn{
+  .btn{
     display:block;
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #FFFFFF;
     padding: 17px 53px;
-    background: $mainColor;
-    border-radius: 3px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    transition: all .3s;
-    height: 50px;
-    &_mobile{
-      display: none;
-      @media (max-width:968px) {
-        display: block;
-        margin: 40px auto 0;
-      }
-    }
-    &:hover{
-      color: $mainColor;
-      border-radius:3px;
-      background-color:#FFFFFF;
-      border: 1px solid $mainColor;   
-    }
-    &:active{
-      color: #FFFFFF;
-      background-color:$mainColor;
-      border: none;
-    }
+  }
+}
+.btn.btn_mobile{
+  display: none;
+  @media (max-width:968px) {
+    display: block;
+    margin: 40px auto 0;
   }
 }
