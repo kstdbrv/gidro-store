@@ -1,40 +1,15 @@
 section.page-section.categories
   .container
     .categories__content
-      a.categories__item.item-categories(href="#")
-        .item-categories__info
-          h4.item-categories__title Квадроциклы
-          p.item-categories__text Подробее
-        .item-categories__img  
-          img(src=require('./images/categories-1.png').default, alt="photo")
-      a.categories__item.item-categories(href="catalog.html")
-        .item-categories__info
-          h4.item-categories__title Гидроциклы
-          p.item-categories__text Подробее
-        .item-categories__img
-          img(src=require('./images/categories-2.png').default, alt="photo")
-      a.categories__item.item-categories(href="#")
-        .item-categories__info
-          h4.item-categories__title Катера
-          p.item-categories__text Подробее
-        .item-categories__img
-          img(src=require('./images/categories-3.png').default, alt="photo")
-      a.categories__item.item-categories(href="#")
-        .item-categories__info
-          h4.item-categories__title Снегоходы
-          p.item-categories__text Подробее
-        .item-categories__img
-          img(src=require('./images/categories-4.png').default, alt="photo")
-      a.categories__item.item-categories(href="#")
-        .item-categories__info
-          h4.item-categories__title Вездеходы
-          p.item-categories__text Подробее
-        .item-categories__img
-          img(src=require('./images/categories-5.png').default, alt="photo")
-      a.categories__item.item-categories(href="#")
-        .item-categories__info
-          h4.item-categories__title Двигатели
-          p.item-categories__text Подробее
-        .item-categories__img
-          img.item-categories__img_resize(src=require('./images/categories-6.png').default, alt="photo")
+      -
+        let items = [
+         {link:'#', img:'categories-item/images/categories-1'},
+         {link:'#', img:'categories-item/images/categories-2'},
+         {link:'#', img:'categories-item/images/categories-3'},
+         {link:'#', img:'categories-item/images/categories-4'},
+         {link:'#', img:'categories-item/images/categories-5'},
+         {link:'#', img:'categories-item/images/categories-6', isResize: true},
+        ]
+      each item in items
+        +categoriesItem(item)
 

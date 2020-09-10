@@ -1,0 +1,15 @@
+mixin categoriesItem(item)
+  -
+    let resizeClassName = ""
+    resizeClassName += item.isResize ? " item-categories__img_resize" : ""
+
+  a.categories__item.item-categories(href=item.link)
+    .item-categories__info
+      h4.item-categories__title Квадроциклы
+      p.item-categories__text Подробее
+    .item-categories__img
+      img(class=resizeClassName src=require(`@components/${item.img}.png`).default, alt="photo")
+
+
+
+

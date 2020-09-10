@@ -1,19 +1,24 @@
-mixin menu-mobile(options)
-  if !options
-    - options = {}
-  if !options.items
-    - options.items = []
-  
+mixin menuMobile(item)
   .menu-mobile
     ul.menu-mobile__list
-      for item in options.items
-        li.menu-mobile__item
-          a.menu-mobile__link(href=item.href)
-            img.menu-mobile__img(src=require(`@components/header/images/user.svg`).default alt="icon")
-            p=item.name
+      li.menu-mobile__item
+        a.menu-mobile__link(href=item.link)
+          img.menu-mobile__img
+          p=item.title
 
-//- - var options.items = [{link:"/#",name:"Квадроциклы"},{link:"catalog.html", name:"Гидроциклы"}]
-//- +menu-mobile({link:"/#",name:"Квадроциклы"},{link:"catalog.html", name:"Гидроциклы"})
+//- -
+//-   let items = [
+//-     {title:'about us',link:'#'},
+//-     {title:'about us',link:'#'},
+//-     {title:'about us',link:'#'},
+//-   ]
+//- each item in items
+//-   +menuMobile(item)
+//- (src=require(`@components/header/images/user.svg`).default alt="icon")
+                 
+
+
+
 
   
 

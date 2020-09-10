@@ -11,33 +11,46 @@ mixin product(img,href,title,price,available,sale)
       h4.product-item__title=title
       p.product-item__price=price
       p.product-item__notify-text нет в наличии
-//- +product('catalog/images/gidrotsikl-1','/product-page.html','Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango','1 049 500 ₽','product-item_sale')
+//- +product('catalog/images/gidrotsikl-1','/product-page.html',
+//- 'Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango','1 049 500 ₽','product-item_sale')
 
 
-//- mixin product(options)
+//- mixin product(item)
 //-   -
-//-     var availableClassName = "product-item__wrapper"
-//-     availableClassName += options.isNotAvailable ? " product-item_not-available" : ""
+//-     let availableClassName = "product-item__wrapper"
+//-     availableClassName += item.isNotAvailable ? " product-item_not-available" : ""
 
-//-     var saleClassName = "product-item"
-//-     saleClassName += options.isSale ? " product-item_sale" : ""
+//-     let saleClassName = "product-item"
+//-     saleClassName += item.isSale ? " product-item_sale" : ""
   
-  //- if !options
-  //-   - options = {}
-  //- if !options.items
-  //-   - options.items = []
-//-   for item in options.items
-//-     div(class = availableClassName)
-//-       button.product-item__favorite
-//-       button.product-item__basket
-//-         img(src=require('@components/products/images/basket-white.svg').default, alt="basket")
-//-       a.product-item__notify-link(href="#")
-//-         span Сообщить о поступлении
-//-       a(href=item.href)(class = saleClassName)
-//-         p.product-item__hover-text посмотреть товар
-//-         img.product-item__img(src=require(`@components/${item.img}.png`).default, alt="product")
-//-         h4.product-item__title=item.title
-//-         p.product-item__price=item.price
-//-         p.product-item__notify-text нет в наличии
+//-   div(class = availableClassName)
+//-     button.product-item__favorite
+//-     button.product-item__basket
+//-       img(src=require('@components/products/images/basket-white.svg').default, alt="basket")
+//-     a.product-item__notify-link(href="#")
+//-       span Сообщить о поступлении
+//-     a(href=item.href)(class = saleClassName)
+//-       p.product-item__hover-text посмотреть товар
+//-       img.product-item__img(src=require(`@components/${item.img}.png`).default, alt="product")
+//-       h4.product-item__title=item.title
+//-       p.product-item__price=item.price
+//-       p.product-item__notify-text нет в наличии
 //- //- +product('product-popular-3','product-item_not-available','product-item_sale')
+//- -
+//-   let items = [
+//-     {img:'catalog/images/gidrotsikl-1',href:'/#',title:'Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango',price:'1 049 500 ₽',isNotAvailable: false,isSale: true},
+//-     {img:'catalog/images/gidrotsikl-1',href:'/#',title:'Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango',price:'1 049 500 ₽',isNotAvailable: false,isSale: true},
+//-  ]
+//- each item in items
+//-   +product(item)
+
+
+
+
+
+
+
+
+
+
 //- +product({img:'catalog/images/gidrotsikl-1',href:'/#',title:'Гидроцикл BRP SeaDoo GTI 130hp SE Black\Mango',price:'1 049 500 ₽',isNotAvailable: false,isSale: true})

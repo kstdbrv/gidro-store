@@ -1,5 +1,3 @@
-- var navLinks = [{link:"#", name:"Квадроциклы"},{link:"#", name:"Катера"},{link:"catalog.html", name:"Гидроциклы"},{link:"#", name:"Лодки"},{link:"#", name:"Вездеходы"},{link:"#", name:"Снегоходы"},{link:"#", name:"Двигатели"},{link:"#", name:"Запчасти"}]
-
 header.header
   .header-top
     .container
@@ -37,61 +35,36 @@ header.header
               a.user-list-header__link.user-list-header__link_basket(href="#")
                 svg(width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg")
                   path(d="M29.999 0L29.0703 2.5H26.659L22.3165 17.5H5.76777L-0.000976562 3.75H21.014L20.309 6.25H3.75902L7.43027 15H20.4653L24.7553 0H29.999ZM10.624 18.75C9.58902 18.75 8.74902 19.59 8.74902 20.625C8.74902 21.6612 9.58902 22.5 10.624 22.5C11.659 22.5 12.499 21.6612 12.499 20.625C12.499 19.59 11.659 18.75 10.624 18.75ZM19.249 10L16.874 18.75C15.839 18.75 14.999 19.5888 14.999 20.625C14.999 21.6612 15.839 22.5 16.874 22.5C17.909 22.5 18.749 21.6612 18.749 20.625C18.749 19.59 17.909 18.75 16.874 18.75L19.249 10Z")
-                p.user-list-header__basket-num 10
+                p.user-list-header__basket-num 10            
   .menu-mobile
     ul.menu-mobile__list
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          img.menu-mobile__img(src=require("./images/user.svg").default alt="icon")
-          p Войти
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-         img.menu-mobile__img(src=require("./images/user.svg").default alt="icon")
-         p Регистрация
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          img.menu-mobile__img(src=require("./images/hart.svg").default alt="icon")
-          p Избранное
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          img.menu-mobile__img(src=require("./images/basket.svg").default alt="icon")
-          p Корзина
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          img.menu-mobile__img(src=require("./images/storage.svg").default alt="icon")
-          p Магазины
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          img.menu-mobile__img(src=require("./images/discount.svg").default alt="icon")
-          p Акции
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          img.menu-mobile__img(src=require("./images/delivery.svg").default alt="icon")
-          p Доставка и оплата
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          p Квадроциклы
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          p Катера
-      li.menu-mobile__item
-        a.menu-mobile__link(href="catalog.html")
-          p Гидроциклы
-      li.menu-mobile__item
-        a.menu-mobile__link(href="")
-          p Лодки
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          p Вездеходы
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          p Снегоходы
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          p Двигатели
-      li.menu-mobile__item
-        a.menu-mobile__link(href="#")
-          p Запчасти
+      -
+        let menuMobile = [
+          {title:'Войти', link:'#', isIcon: true, icon:'user'},
+          {title:'Регистрация', link:'#', isIcon: true, icon:'user'},
+          {title:'Избранное', link:'#', isIcon: true, icon:'hart'},
+          {title:'Корзина', link:'#', isIcon: true, icon:'basket'},
+          {title:'Магазины', link:'#', isIcon: true, icon:'storage'},
+          {title:'Акции', link:'#', isIcon: true, icon:'discount'},
+          {title:'Доставка и оплата', link:'#', isIcon: true, icon:'delivery'},
+          {title:'Квадроциклы', link:'#'},
+          {title:'Катера', link:'#'},
+          {title:'Гидроциклы', link:'#'},
+          {title:'Лодки', link:'#'},
+          {title:'Вездеходы', link:'#'},
+          {title:'Снегоходы', link:'#'},
+          {title:'Двигатели', link:'#'},
+          {title:'Запчасти', link:'#'},
+        ]
+      each i in menuMobile
+          li.menu-mobile__item
+            a.menu-mobile__link(href=i.link)
+              if(i.isIcon)
+                img.menu-mobile__img(src=require(`@components/header/images/${i.icon}.svg`).default alt="icon")
+                p=i.title
+              else
+                img.menu-mobile__img
+                p=i.title
       li.menu-mobile__adress
         a.menu-mobile__link(href="#")
         | Москва,
@@ -108,7 +81,15 @@ header.header
   .header-bottom
     .container
       ul.header-botton__menu-categories.menu-categories-header
-        for i in navLinks
+        -
+          let navLinks = [ {link:"#", name:"Квадроциклы"},
+                           {link:"#", name:"Катера"},
+                           {link:"catalog.html", name:"Гидроциклы"},
+                           {link:"#", name:"Лодки"},
+                           {link:"#", name:"Вездеходы"},{link:"#", name:"Снегоходы"},
+                           {link:"#", name:"Двигатели"},{link:"#", name:"Запчасти"}
+                          ]
+        each i in navLinks
           li.menu-categories-header__item
             a(href=i.link).menu-categories-header__link=i.name
   

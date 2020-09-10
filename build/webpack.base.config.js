@@ -31,12 +31,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-/*       '@layouts': path.resolve(__dirname, '../src/layouts'),
-      '@pages': path.resolve(__dirname, '../src/pages'), */
       '@components': `${PATHS.src}/components/`,
-/*       '@styles': path.resolve(__dirname, '../src/assets/styles'),
-      '@fonts': path.resolve(__dirname, '../src/assets/styles/fonts'),
-      '@favicons': path.resolve(__dirname, '../src/assets/favicons'), */
     },
   },
   optimization: {

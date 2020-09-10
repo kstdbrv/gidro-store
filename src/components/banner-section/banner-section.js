@@ -9,9 +9,6 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 4000,
     speed: 800,
-/*     speed: 500,
-    fade: true,
-    cssEase: 'linear' */
     responsive: [
       {
         breakpoint: 969,
